@@ -1,0 +1,43 @@
+/* Gallery Container */
+.gallery-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+  transform: scale(0.8); /* Shrink the grid to 80% of its original size */
+  transform-origin: center; /* Shrinks the grid from its center */
+}
+
+/* Big Row */
+.big-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+/* Big Image Group */
+.big-image-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%; /* Each group takes 30% of the row width */
+}
+
+/* Big Images */
+.big-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+/* Small Images */
+.small-images {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.small-images img {
+  width: 45%;
+  height: auto;
+}

@@ -1,0 +1,253 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  overflow-x: hidden;
+}
+nav {
+  background-color: F5F7FA;
+  height: 80px;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.logo img {
+  height: 65px;
+  margin-top: 5px;
+  padding-left: 150px;
+}
+
+nav ul {
+  float: right;
+  padding-right: 50px;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+nav ul li a {
+  color: rgb(0, 0, 0);
+  font-size: 12px;
+  margin-top: 30px;
+  margin-right: 22px;
+  display: inline-block;
+  text-decoration: none;
+  transition: border-bottom 0.3s;
+}
+
+nav ul li a:hover {
+  border-bottom: 2px solid #1c81d6;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+/* Hamburger Icon */
+.menu-icon {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+.close-icon {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+#mobile {
+  display: none;
+}
+
+#carouselExample {
+  display: none;
+}
+
+#carouselExampleSlidesOnly {
+  display: none;
+}
+
+footer {
+  background-color: #007acc;
+  color: white;
+  padding: 40px 20px;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.footer-logo h6 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.footer-logo p {
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+.footer-section h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin: 5px 0;
+}
+
+.footer-section ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Social icons styling */
+.social-icons a {
+  margin-right: 10px;
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+  filter: brightness(1000%);
+  opacity: 1;
+}
+
+/* Subscription form styling */
+.footer-section form {
+  display: flex;
+  align-items: center;
+}
+
+.footer-section input[type="email"] {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-size: 11px;
+  outline: none;
+  margin-right: 10px;
+  width: 200px;
+  opacity: 1;
+}
+
+input[type="email"]::placeholder {
+  color: #000000; /* Placeholder text color */
+  font-style: italic; /* Italicize the text */
+  opacity: 1; /* Set opacity (0 to 1) */
+  font-size: 11px; /* Font size */
+}
+
+.footer-section button {
+  background: none;
+  border: none;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.footer-section img {
+  width: 20px;
+  height: 20px;
+}
+
+@media only screen and (max-width: 480px) {
+  * {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: "Poppins", sans-serif;
+    width: 100%; /* Make the body span the full width of the screen */
+    height: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    text-decoration: none;
+  }
+
+  nav {
+    display: none;
+  }
+  .logo img {
+    height: 45px;
+    margin-left: -150px; /* Adjusted to place the logo */
+  }
+
+  #mobile {
+    display: block;
+    font-size: 16px;
+    position: relative;
+    zoom: 0.8;
+    box-shadow: none;
+  }
+  .navbar-nav {
+    position: absolute;
+    left: 20px;
+  }
+  #carouselExampleSlidesOnly {
+    display: block;
+  }
+
+  #carouselExample {
+    display: block;
+  }
+
+  .navbar-nav a {
+    text-align: left;
+    color: white;
+  }
+
+  #staticBackdrop {
+    background-color: #1c81d6;
+    box-shadow: none;
+    outline-width: 0;
+    z-index: 10;
+  }
+
+  .offcanvas-header {
+    position: relative;
+  }
+
+  #staticBackdropLabel {
+    position: absolute;
+    left: 20px;
+    font-size: 25px;
+  }
+
+  footer {
+    zoom: 0.8;
+  }
+}

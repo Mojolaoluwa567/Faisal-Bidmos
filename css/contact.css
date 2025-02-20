@@ -1,0 +1,173 @@
+main {
+  margin-left: 250px;
+  margin-top: 60px;
+}
+
+.main {
+  display: flex;
+}
+
+.heading {
+  justify-content: flex-start;
+  margin-left: 20px;
+  margin-top: 30px;
+}
+
+.heading2 {
+  justify-content: flex-start;
+  margin-left: 20px;
+  margin-top: 30px;
+}
+
+.heading h1 {
+  font-size: 50px;
+  font-weight: 500;
+}
+
+.heading h1 span {
+  font-size: 50px;
+  color: #1c81d6;
+  margin-top: -5px;
+}
+
+.heading2 p {
+  font-size: 14px;
+  max-width: 40%;
+  margin-top: -30px;
+  margin-bottom: 10px;
+}
+
+.heading2 h4 {
+  margin-top: -30px;
+}
+
+.social-icon img {
+  width: 25px;
+  height: 25px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.direct {
+  display: flex;
+  flex-direction: column;
+  margin-left: 600px;
+  margin-top: -160px;
+}
+
+.contact {
+  margin-top: 20px;
+}
+
+.contact img {
+  width: 30px;
+  height: 30px;
+}
+
+.contact p {
+  font-size: 14px;
+}
+
+.map {
+  margin-top: 25px;
+}
+
+.boxf {
+  width: 400px;
+  height: 450px;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 0px 3px 6px rgba(69, 69, 69, 0.458);
+  margin-left: 950px;
+  margin-top: -450px;
+}
+
+form h2 {
+  font-size: 12px;
+  text-align: center;
+  padding-top: 30px;
+}
+
+/* form {
+  margin-top: -350px;
+} */
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+form input {
+  background-color: rgb(226, 225, 225);
+  border-style: none;
+  border-radius: 7px;
+  width: 300px;
+  height: 40px;
+  padding-left: 10px;
+}
+
+.message {
+  height: 135px;
+  padding-left: 10px;
+}
+
+#yourname::placeholder {
+  font-size: 9px;
+  padding-left: 10px;
+}
+
+#youremail::placeholder {
+  font-size: 9px;
+  padding-left: 10px;
+}
+
+#yourmessage::placeholder {
+  font-size: 15px;
+  padding-left: 10px;
+}
+
+.button {
+  background-color: #1c81d6;
+  color: #ffffff;
+  width: 60px;
+  height: 40px;
+  border-style: none;
+  margin-top: 20px;
+}
+
+.button a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 480px) {
+  main {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transform: scale(0.8);
+    transform-origin: center;
+    margin-top: -50px;
+  }
+  .heading h1 {
+    font-size: 28px;
+  }
+
+  .heading2 p {
+    max-width: 90%;
+  }
+
+  .boxf {
+    width: 95%;
+    display: block;
+    width: 400px;
+    height: 450px;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0px 3px 6px rgba(69, 69, 69, 0.458);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -300px;
+  }
+}
