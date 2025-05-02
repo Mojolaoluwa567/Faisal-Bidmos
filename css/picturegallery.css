@@ -1,3 +1,14 @@
+body:not(.images-loaded) main,
+body:not(.images-loaded) footer {
+  visibility: hidden;
+}
+
+body.images-loaded main,
+body.images-loaded footer {
+  visibility: visible;
+  transition: visibility 0s linear 0s;
+}
+
 /* Gallery Container */
 .gallery-container {
   width: 90%;
@@ -40,4 +51,25 @@
 .small-images img {
   width: 45%;
   height: auto;
+}
+
+#modalImage {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+  width: 400px;
+}
+
+/* Hides scrollbar in the modal body */
+.modal-body {
+  overflow-y: hidden; /* Disable vertical scroll */
+}
+
+/* Optional: hide scrollbars across all browsers */
+.modal-body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.modal-body {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
 }
