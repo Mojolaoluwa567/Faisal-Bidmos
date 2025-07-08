@@ -1,0 +1,2520 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+/* width of the entire scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* background of the track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* handle */
+::-webkit-scrollbar-thumb {
+  background: #3a3776;
+}
+
+/* handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #232154;
+}
+
+@font-face {
+  font-family: "InterDisplay-Regular";
+  src: url("font/InterDisplay-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body {
+  height: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Flex container to push footer down */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content-wrap {
+  flex: 1;
+}
+
+body {
+  font-family: "InterDisplay-Regular", sans-serif;
+  color: #222;
+  background-color: white;
+}
+
+.top {
+  padding-bottom: 20rem;
+  position: relative;
+  z-index: 1;
+}
+
+.dropdown-section {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.dropdown-wrapper {
+  border-radius: 1rem;
+  max-width: 80rem;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  top: -20rem;
+  z-index: 2;
+}
+
+.dropdown-heading {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: white;
+  font-family: "InterDisplay-Black", sans-serif;
+  display: block;
+  position: relative;
+  z-index: 100;
+}
+
+.dropdown-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.dropdown .btn {
+  min-width: 14rem;
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+}
+.btn.btn-secondary {
+  background-color: #3a3776;
+  border-color: #3a3776;
+  color: #fff;
+}
+
+.btn.btn-secondary:hover {
+  background-color: #232154;
+  border-color: #232154;
+}
+
+.btn-outline-primary {
+  border-color: #3a3776; /* Bootstrap primary blue */
+  color: #3a3776;
+  font-weight: 500;
+  padding: 6px 16px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+  background-color: #3a3776;
+  color: white;
+  border-color: #3a3776;
+}
+
+/* Header Layout */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  padding: 0 4rem;
+  height: 100px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Logo Styling */
+.logo img {
+  width: 150px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Navigation Styling */
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #000;
+  font-family: "InterDisplay-Medium", sans-serif;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #3a3776;
+  border-bottom: 2px solid #3a3776;
+}
+
+/* Contact Button Styling */
+.contact-button a {
+  background-color: #3a3776; /* lime green like the screenshot */
+  padding: 10px 20px;
+  border-radius: 100px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.contact-button a:hover {
+  background-color: #232154;
+}
+
+#hero-img {
+  filter: brightness(0.65);
+}
+
+.top img {
+  width: 100%;
+  object-fit: cover;
+  height: 37rem;
+  object-position: center 25%;
+  display: block;
+}
+
+.mob-img img {
+  display: none;
+}
+
+.top {
+  margin-bottom: 0; /* Remove huge gap below .top */
+  padding-bottom: 1rem; /* Light spacing only if needed */
+}
+
+.write-up1 {
+  margin-top: 0; /* Prevent accidental top space */
+  padding-top: 0.5rem; /* Optional, for slight breathing room */
+}
+.write-up1 h1 {
+  font-size: 2rem;
+  color: #3a3776;
+  text-align: center;
+  font-family: "InterDisplay-Bold", sans-serif;
+}
+
+.write-up1 p {
+  max-width: 90ch;
+  margin: 0 auto;
+  text-align: justify;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.boxes {
+  display: flex;
+  margin-left: 21rem;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.box {
+  width: 400px;
+  height: 400px;
+  background-color: #eee;
+  border-radius: 2rem;
+  transition: box-shadow 0.3s ease;
+  margin-top: 2rem;
+}
+
+.box:hover {
+  box-shadow: 0 0 30px rgba(0, 76, 153, 0.3); /* Dark blue glow */
+  background-color: white;
+}
+
+.box h1 {
+  font-family: "InterDisplay-Bold", sans-serif;
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #3a3776;
+}
+
+.box p {
+  font-size: 0.9rem;
+  line-height: 2.5;
+  max-width: 88%;
+  margin-left: 1rem;
+}
+
+.value h1 {
+  font-size: 4rem;
+  margin-left: 22rem;
+  margin-top: 3rem;
+  color: #3a3776;
+}
+
+.value p {
+  margin-left: 22rem;
+  line-height: 2.5;
+  font-size: 1.1rem;
+  max-width: 70%;
+}
+
+.value-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #3a3776;
+  color: white;
+  text-decoration: none;
+  margin-left: 22rem;
+  transition: background-color 0.3s;
+  width: 43rem;
+  text-align: center;
+}
+
+.value-btn:hover {
+  background-color: rgb(1, 22, 45);
+  cursor: pointer;
+}
+
+.both {
+  display: flex;
+}
+
+.value-img img {
+  height: 20rem;
+  margin-left: 3rem;
+  margin-top: 3rem;
+}
+
+.move {
+  margin-top: 4rem;
+}
+
+.some-of-our h1 {
+  font-size: 2rem;
+  color: #3a3776;
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-align: center;
+  font-family: "InterDisplay-Bold", sans-serif;
+}
+
+.some-of-our p {
+  font-size: 1.1rem;
+  color: #000000;
+  line-height: 1.6;
+  margin-top: 0.625rem;
+  max-width: 50%;
+  text-align: justify;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  margin-bottom: 3rem;
+}
+
+/* Services Section */
+.services {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  padding: 1.25rem;
+}
+
+.service-card {
+  position: relative;
+  width: 21.875rem;
+  height: 18.75rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+.service-card img {
+  width: 100%;
+  object-fit: cover;
+  height: 20rem;
+}
+
+#size {
+  height: 21.875rem;
+}
+
+.card-content {
+  position: absolute;
+  bottom: 0.625rem;
+  left: 0.625rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 0.625rem;
+  border-radius: 0.5rem;
+}
+
+.card-content h3 {
+  font-size: 0.9375rem;
+  color: #333;
+  margin-bottom: 0.3125rem;
+}
+
+.read-more {
+  color: #3a3776;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  transition: box-shadow 0.3s;
+}
+
+.why {
+  display: flex;
+  margin-top: 3rem;
+  background-color: #eee;
+  height: 35rem;
+}
+
+.us {
+  margin-left: 10rem;
+  margin-top: 2rem;
+}
+
+.why h1 {
+  font-family: "InterDisplay-Bold", sans-serif;
+  color: #3a3776;
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+.why p {
+  max-width: 55%;
+  font-size: 1.1rem;
+  text-align: justify;
+  margin-bottom: 1rem;
+  line-height: 2;
+}
+
+.viddy {
+  width: 70rem; /* your crop width */
+  height: 30rem; /* your crop height */
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+  margin-left: 25rem;
+  margin-top: 2rem;
+}
+
+.viddy video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.5); /* zoom in */
+  transform-origin: center; /* change to 'top left', etc., if needed */
+}
+
+.play {
+  margin-top: 1.5rem;
+  margin-left: 25rem; /* aligns with .viddy */
+  text-align: left;
+}
+
+.why-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #3a3776;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  width: 33rem;
+  text-align: center;
+}
+
+.why-btn:hover {
+  background-color: rgb(1, 22, 45);
+  cursor: pointer;
+}
+.clients {
+  background: white;
+  text-align: center;
+  height: 30rem;
+}
+
+.clients h2 {
+  font-family: "InterDisplay-Bold", sans-serif;
+  color: #3a3776;
+  font-size: 2.5rem;
+  margin-bottom: 1.25rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.clients p {
+  font-size: 1.1;
+  text-align: left;
+  max-width: 100%;
+  line-height: 2.5;
+  margin-left: 31rem;
+  margin-bottom: 3rem;
+}
+
+.scroll-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 4rem;
+}
+
+.logo-scroll {
+  width: 100%;
+  overflow-x: auto;
+  display: flex;
+  gap: 3rem;
+  white-space: nowrap;
+}
+
+.logo-scroll img {
+  height: 7rem;
+  flex-shrink: 0;
+  transition: transform 0.3s;
+}
+
+.logo-scroll img:hover {
+  transform: scale(1.05);
+}
+
+.logo-scroll::-webkit-scrollbar {
+  display: none; /* Hide scrollbars */
+}
+
+/* About Page */
+
+.block1 {
+  display: flex;
+  margin-left: 5rem;
+}
+.about-us {
+  margin-top: 0.4rem;
+  margin-left: 4rem;
+}
+.about-us2 {
+  margin-top: 5rem;
+}
+
+.about-img img {
+  height: 27rem;
+  margin-right: 17rem;
+  margin-top: 4rem;
+}
+
+.about-img2 img {
+  margin-left: 11.5rem;
+  margin-top: -0.25rem;
+}
+
+.about-us h1 {
+  font-family: "InterDisplay-Bold";
+  margin-left: 12rem;
+  margin-top: 3rem;
+  font-size: 4.5rem;
+  color: #3a3776;
+}
+
+.about-us p {
+  margin-left: 12rem;
+  margin-bottom: 0.5rem;
+  max-width: 60%;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.about-us2 h1 {
+  font-family: "InterDisplay-Bold";
+  margin-left: 5rem;
+  margin-top: rem;
+  font-size: 4.5rem;
+  color: #3a3776;
+}
+
+.about-us2 p {
+  margin-left: 5rem;
+  margin-top: rem;
+  max-width: 50%;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.v,
+.m {
+  color: red;
+  font-family: "InterDisplay-SemiBold", sans-serif;
+}
+
+.core-values-section {
+  max-width: 50rem; /* 800px */
+  margin: 6rem auto;
+  padding: 1.25rem;
+  text-align: center;
+}
+
+.core-values-section h2 {
+  font-family: "InterDisplay-Bold";
+  margin-bottom: 3rem;
+  font-size: 4.5rem;
+  color: #3a3776;
+}
+
+.value-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.25rem 0;
+}
+
+.label {
+  width: 30%;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-align: left;
+  font-family: "InterDisplay-Regular", sans-serif;
+}
+
+.bar-container {
+  width: 65%;
+  height: 1.25rem;
+  background: #ccc;
+  border-radius: 0.625rem;
+  overflow: hidden;
+}
+
+.bar {
+  height: 100%;
+  width: 0;
+  background-color: #3a3776;
+  transition: width 2s ease;
+}
+
+.bar.animate {
+  width: 95%;
+}
+
+/* Services Page*/
+
+.services-title {
+  font-size: 4.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  font-family: "InterDisplay-Bold", sans-serif;
+  color: #3a3776;
+  margin-top: 2rem;
+  margin-left: 4rem;
+}
+
+.services-subtext {
+  font-size: 1.125rem;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+.gridy {
+  margin-left: 5rem;
+}
+
+.card-wrapper {
+  perspective: 1000px;
+}
+
+.service-cards {
+  border-radius: 1rem;
+  overflow: hidden;
+  background: #fff;
+  height: 100%;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transform-style: preserve-3d;
+}
+
+.service-cards:hover {
+  transform: rotateY(5deg) rotateX(5deg) scale(1.03);
+  box-shadow: 0 25px 50px rgba(0, 123, 255, 0.4);
+}
+
+.service-cards img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+.card-title {
+  font-weight: 600;
+  color: #3a3776;
+  font-family: "InterDisplay-Bold", sans-serif;
+}
+
+.card-text {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.read-more {
+  color: #3a3776;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+/* Team Page */
+
+.team-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.headingss {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.headingss h1 {
+  font-size: 4.5rem;
+  font-family: "InterDisplay-Bold", sans-serif;
+  color: #3a3776;
+}
+
+.headingss p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #000000;
+  font-size: 1rem;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.team-member {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.image-wrapper img {
+  height: 15rem;
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+}
+
+.member-info {
+  text-align: center;
+}
+
+.member-info h2 {
+  font-size: 1.5rem;
+  color: #3a3776;
+  margin-bottom: 0.5rem;
+}
+
+.member-info h5 {
+  font-size: 0.95rem;
+  color: #888da8;
+  margin-bottom: 1rem;
+}
+
+.member-info .bio {
+  font-size: 0.9rem;
+  color: #5e6570;
+  text-align: justify;
+  line-height: 1.6;
+  max-height: 320px;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}
+
+/* clientelle */
+.heading {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.heading h1 {
+  font-size: 4.5rem;
+  font-family: "InterDisplay-Bold", sans-serif;
+  color: #3a3776;
+}
+
+.heading p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #000000;
+  font-size: 1rem;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Four equal-width columns */
+  margin: 0 auto; /* Center the grid horizontally */
+  transform: scale(0.825); /* Shrink the grid to 80% of its original size */
+  transform-origin: center; /* Shrinks the grid from its center */
+  width: 70%; /* Set a reasonable width */
+  margin-top: -5rem; /* Remove unnecessary negative margin */
+  justify-items: center; /* Center items horizontally */
+  align-items: start; /* Align items to the top of the grid cell */
+}
+
+/* Add a larger gap after every 2 rows */
+.grid-container > .client:nth-child(8n) {
+  margin-bottom: 1.25rem; /* Add space after every 3 rows */
+}
+
+.client {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border: 1px solid #ddd; /* Border for each client box */
+  padding: 0.625rem; /* Inner spacing for content */
+  height: 10.3125rem; /* Consistent height for all boxes */
+  width: 100%; /* Automatically adjust to grid column width */
+}
+
+.client img {
+  max-width: 100%; /* Ensure images fit within their container */
+  max-height: 100%; /* Prevent images from overflowing vertically */
+  object-fit: contain; /* Maintain aspect ratio of images */
+}
+
+/* Span a specific item across multiple columns */
+.grid-container > .client.special {
+  grid-column: span 3; /* Use a specific class instead of hardcoding item number */
+}
+
+/* Picture Gallery */
+.whole {
+  max-width: 68.75rem;
+  width: 90%;
+  margin-left: 25rem;
+  margin-top: 3rem;
+}
+.image-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  display: none;
+}
+
+.image-modal img {
+  max-width: 90%;
+  max-height: 80vh;
+  border-radius: 8px;
+  box-shadow: 0 0 30px #00000088;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  background: #fff;
+  color: #333;
+  padding: 8px 14px;
+  border: none;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+.close-btn:hover {
+  background: #eee;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 10px;
+}
+
+.gallery a {
+  display: block;
+  overflow: hidden;
+
+  background: #ddd;
+}
+
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Randomly large items for visual variety */
+.gallery a:nth-child(7n) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.gallery a:nth-child(11n) {
+  grid-row: span 2;
+}
+
+.gallery a:nth-child(5n) {
+  grid-column: span 2;
+}
+
+/* Contact */
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem;
+  gap: 2.5rem;
+  margin-bottom: 6rem;
+  margin-left: 33rem;
+  margin-top: 1.5rem;
+}
+
+.contact-form,
+.contact-info {
+  flex: 1 1 45%;
+  min-width: 18.75rem;
+}
+
+h2 {
+  color: #3a3776;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-family: "InterDisplay-Bold";
+}
+
+.contact-form form input,
+.contact-form form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+}
+
+.contact-form form button {
+  background-color: #3a3776;
+  color: white;
+  padding: 0.75rem 1.25rem;
+  border: none;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.contact-form form button:hover {
+  background-color: #232154;
+}
+
+.contact-info .info-block {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1.25rem;
+}
+
+.contact-info .info-block img {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.social-icon a {
+  color: #3a3776;
+  font-size: 1rem;
+  margin-right: 1rem;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icon a:hover {
+  color: #232154;
+}
+
+/* Footer */
+footer {
+  background: #eee;
+  padding: 40px 20px;
+  text-align: center;
+  font-family: "InterDisplay-Regular", sans-serif;
+}
+.footer-logo {
+  height: 50px;
+  margin-bottom: 10px;
+}
+.socials {
+  margin: 10px 0;
+}
+.socials a img {
+  height: 20px;
+  margin: 0 10px;
+}
+form {
+  margin-top: 20px;
+}
+input[type="email"] {
+  padding: 10px;
+  width: 250px;
+  border: 1px solid #ccc;
+}
+button {
+  padding: 10px 15px;
+  background: #000;
+  color: white;
+  border: none;
+}
+.footer-note {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* publications */
+.blog-post {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+  height: 100%;
+}
+.blog-post img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.blog-post:hover {
+  transform: translateY(-5px);
+}
+.blog-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+.blog-date {
+  font-size: 0.875rem;
+  color: gray;
+}
+#blog-header {
+  color: #3a3776;
+  font-size: 4.5rem;
+  font-family: "InterDisplay-Bold", sans-serif;
+}
+.btn.read-more-btn {
+  background-color: #3a3776 !important;
+  border-color: #3a3776;
+}
+.btn.read-more-btn:hover {
+  background-color: #232154 !important;
+  border-color: #232154;
+}
+
+/* ==========================================
+   Medium Devices:Phone Home Page
+   (portrait <576px)
+   ========================================== */
+
+/* Small devices: phones (portrait <576px) */
+
+@media (max-width: 575.98px) {
+  .btn.d-lg-none {
+    font-size: 1.5rem; /* Make the hamburger bigger */
+    background-color: transparent; /* No background by default */
+    border: none; /* Remove default border */
+    color: #3a3776; /* Your primary brand color */
+    cursor: pointer;
+    padding: 0.25rem 0.5rem; /* Small padding */
+    line-height: 1;
+    transition: color 0.3s ease;
+    margin-right: -2rem;
+  }
+
+  header {
+    zoom: 0.9;
+  }
+  /* Remove the offcanvas container shadow */
+  .offcanvas {
+    box-shadow: none !important;
+  }
+
+  /* Remove the dark overlay (backdrop) shadow */
+  .offcanvas-backdrop {
+    background-color: transparent !important;
+  }
+
+  .offcanvas-header .btn-close:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  /* Hover and focus states */
+  .btn.d-lg-none:hover,
+  .btn.d-lg-none:focus {
+    color: #232154; /* Darker shade on hover/focus */
+    outline: none; /* Remove default outline */
+  }
+  .offcanvas .nav-links {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .offcanvas .nav-links a {
+    text-decoration: none;
+    color: #000; /* black like desktop */
+    font-family: "InterDisplay-Medium", sans-serif;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border-bottom: none;
+    padding: 0.25rem 0;
+  }
+
+  .offcanvas .nav-links a:hover {
+    color: #3a3776;
+    border-bottom: 2px solid #3a3776;
+  }
+
+  /* Contact Button Styling - Offcanvas */
+  .offcanvas .contact-button a {
+    background-color: #3a3776;
+    padding: 10px 20px;
+    border-radius: 100px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    display: block;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+
+  .offcanvas .contact-button a:hover {
+    background-color: #232154;
+  }
+
+  .dropdown-heading {
+    display: none;
+  }
+
+  .dropdown-section {
+    zoom: 0.6;
+    margin-top: 10rem;
+  }
+
+  .top img {
+    display: none;
+  }
+
+  .mob-img img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .logo img {
+    margin-left: -4rem;
+  }
+  .write-up1 {
+    zoom: 0.8;
+    margin-top: -10rem;
+  }
+
+  .write-up1 h1 {
+    font-size: 1.5rem;
+    margin-top: -2rem;
+  }
+
+  .write-up1 p {
+    font-size: 1rem;
+    max-width: 90%;
+    margin: 1rem auto;
+    text-align: justify;
+  }
+
+  .boxes {
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 0;
+    zoom: 0.9;
+  }
+
+  .box {
+    width: 90%;
+    height: auto;
+  }
+
+  .value h1,
+  .value p,
+  .value-btn {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: block;
+  }
+  .value p {
+    text-align: justify;
+    max-width: 90%;
+  }
+
+  .value h1 {
+    font-family: "InterDisplay-Bold", sans-serif;
+    font-size: 2rem;
+    margin-top: -1rem;
+  }
+
+  .value-btn {
+    width: 90%;
+  }
+
+  .both {
+    flex-direction: column;
+    align-items: center;
+    zoom: 0.7;
+  }
+
+  .value-img img {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    height: 0;
+    overflow: hidden;
+  }
+
+  .move {
+    zoom: 0.7;
+  }
+  .services {
+    zoom: 0.8;
+  }
+
+  .viddy {
+    display: none;
+  }
+
+  .why {
+    height: auto;
+    padding: 1rem;
+    zoom: 0.7;
+  }
+
+  .why h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .why p {
+    max-width: 100%;
+    text-align: justify;
+  }
+
+  .why-btn {
+    margin: 0 auto;
+  }
+
+  .us {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  .us a {
+    width: 30rem;
+  }
+
+  .us p {
+    zoom: 0.9;
+  }
+
+  .clients {
+    height: auto;
+    zoom: 0.7;
+    display: block;
+  }
+
+  .clients p {
+    font-size: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+    max-width: 80%;
+  }
+
+  .clients h2 {
+    padding-top: 1.5rem;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .scroll-wrapper {
+    zoom: 0.8;
+  }
+
+  .services {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-card {
+    width: 90%;
+    height: auto;
+  }
+
+  .service-card img {
+    height: 15rem;
+  }
+
+  .some-of-our p {
+    max-width: 90%;
+  }
+
+  footer {
+    zoom: 0.8;
+  }
+}
+
+/* ==========================================
+   Medium Devices: Tablets (576px – 1023.98px)
+   ========================================== */
+@media (min-width: 576px) and (max-width: 1023.98px) {
+  .write-up1 p,
+  .clients p {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .value h1,
+  .value p,
+  .value-btn {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  .services {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .boxes {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 0;
+    zoom: 1;
+  }
+
+  .box {
+    width: 80%;
+    height: auto;
+  }
+
+  .both {
+    zoom: 0.6;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .value p {
+    text-align: justify;
+    margin-left: 3rem;
+  }
+
+  .value h1 {
+    text-align: justify;
+    margin-left: 3rem;
+    font-size: 3rem;
+  }
+
+  .value-btn {
+    text-align: center;
+    margin-left: 3rem;
+    width: 32rem;
+  }
+
+  .value-img img {
+    margin-right: 7rem;
+  }
+
+  .why {
+    flex-direction: column;
+    height: auto;
+    display: flex;
+  }
+
+  .viddy {
+    height: 40rem;
+    margin-left: 25rem;
+    zoom: 0.5;
+    width: auto;
+    margin-top: rem;
+  }
+
+  .why-btn {
+    width: 29rem;
+  }
+
+  .move p {
+    max-width: 90%;
+  }
+
+  .us {
+    padding-bottom: 2rem;
+  }
+
+  .us p {
+    max-width: 110%;
+    text-align: justify;
+    margin-right: 10rem;
+  }
+
+  .clients p {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    zoom: 1.1;
+    max-width: 80%;
+  }
+  .client {
+    height: 55rem;
+  }
+  .scroll-wrapper {
+    margin-top: -1rem;
+  }
+}
+
+/* ==========================================
+   Large Devices:Small Standard Laptops
+   (Up to 1366px) home page
+   ========================================== */
+
+@media (min-width: 1024px) and (max-width: 1366px) {
+  .write-up1 p {
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .boxes {
+    margin-left: 0;
+    justify-content: center;
+    flex-wrap: wrap;
+    zoom: 0.8;
+  }
+
+  .both {
+    zoom: 0.8;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .value p {
+    text-align: justify;
+    margin-left: 3rem;
+  }
+
+  .value h1 {
+    text-align: justify;
+    margin-left: 3rem;
+    font-size: 3rem;
+  }
+
+  .value-btn {
+    text-align: center;
+    margin-left: 3rem;
+    width: 32rem;
+  }
+
+  .value-img img {
+    margin-right: 7rem;
+  }
+
+  .why {
+    flex-direction: column;
+    height: auto;
+    display: flex;
+  }
+
+  .viddy {
+    height: 40rem;
+    margin-left: 55rem;
+    zoom: 0.5;
+    width: auto;
+    margin-top: rem;
+  }
+
+  .clients p {
+    max-width: 80%;
+    margin-left: auto;
+  }
+
+  .move p {
+    max-width: 90%;
+  }
+
+  .us {
+    padding-bottom: 2rem;
+  }
+
+  .us h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-right: 9.6rem;
+  }
+
+  .us p {
+    max-width: 100%;
+    text-align: justify;
+    margin-right: 10rem;
+  }
+
+  .why-btn {
+    margin: 0 auto;
+    width: 60rem;
+  }
+  .clients p {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    zoom: 1.1;
+  }
+
+  .clients h2 {
+    text-align: center;
+    margin-bottom: -0.2rem;
+    font-size: 2rem;
+    margin-top: -0.2rem;
+  }
+
+  .scroll-wrapper {
+    zoom: 1.3;
+    margin-top: -0.5rem;
+  }
+
+  .clients {
+    height: 26.7rem;
+  }
+}
+
+/* @media (min-width: 1600px) {
+  .write-up1 {
+    position: relative;
+  }
+
+  .texcy p {
+    position: relative;
+    right: 14rem;
+    max-width: 60%;
+    width: 100%;
+    text-align: justify;
+  }
+
+  .boxes {
+    zoom: 0.9;
+    position: relative;
+  }
+
+  .box {
+    position: relative;
+    right: 8rem;
+  }
+
+  .both {
+    zoom: 0.9;
+    position: relative;
+    margin-left: -10rem;
+  }
+
+  .some-of-our p {
+    max-width: 65%;
+  }
+
+  .why {
+    margin-left: -11rem;
+  }
+
+  .us p {
+    max-width: 70%;
+  }
+
+  .clients p {
+    margin-left: 13rem;
+    font-size: 1.1rem;
+    max-width: 70%;
+    text-align: justify;
+  }
+  .clients h1 {
+    margin-left: 15rem;
+    margin-bottom: -1rem;
+  }
+} */
+
+/* ==========================================
+   Medium Devices:phone about page
+   ( 575.98px)
+   ========================================== */
+@media (max-width: 575.98px) {
+  .top img {
+    display: none;
+  }
+
+  .mob-img img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  header {
+    zoom: 0.9;
+  }
+  /* Remove the offcanvas container shadow */
+  .offcanvas {
+    box-shadow: none !important;
+  }
+
+  /* Remove the dark overlay (backdrop) shadow */
+  .offcanvas-backdrop {
+    background-color: transparent !important;
+  }
+
+  .offcanvas-header .btn-close:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  /* Hover and focus states */
+  .btn.d-lg-none:hover,
+  .btn.d-lg-none:focus {
+    color: #232154; /* Darker shade on hover/focus */
+    outline: none; /* Remove default outline */
+  }
+  .offcanvas .nav-links {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .offcanvas .nav-links a {
+    text-decoration: none;
+    color: #000; /* black like desktop */
+    font-family: "InterDisplay-Medium", sans-serif;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border-bottom: none;
+    padding: 0.25rem 0;
+  }
+
+  .offcanvas .nav-links a:hover {
+    color: #3a3776;
+    border-bottom: 2px solid #3a3776;
+  }
+
+  /* Contact Button Styling - Offcanvas */
+  .offcanvas .contact-button a {
+    background-color: #3a3776;
+    padding: 10px 20px;
+    border-radius: 100px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    display: block;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+
+  .offcanvas .contact-button a:hover {
+    background-color: #232154;
+  }
+  .btn.d-lg-none {
+    font-size: 1.5rem; /* Make the hamburger bigger */
+    background-color: transparent; /* No background by default */
+    border: none; /* Remove default border */
+    color: #3a3776; /* Your primary brand color */
+    cursor: pointer;
+    padding: 0.25rem 0.5rem; /* Small padding */
+    line-height: 1;
+    transition: color 0.3s ease;
+    margin-right: -2rem;
+  }
+
+  .about-img img,
+  .about-img2 img {
+    display: none;
+  }
+
+  .block1 {
+    zoom: 0.8;
+    position: relative;
+  }
+
+  #about-head {
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+    font-size: 2rem; /* adjust as needed */
+  }
+
+  #about-body {
+    display: block;
+    max-width: 100% !important;
+    width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: justify !important;
+  }
+
+  .about-us {
+    position: relative;
+    right: 4rem;
+    top: 2rem;
+  }
+
+  .about-us2 {
+    position: relative;
+    right: 2rem;
+  }
+
+  .core {
+    zoom: 0.7;
+  }
+  #coreValues h2 {
+    font-size: 2.5rem;
+  }
+}
+
+/* ==========================================
+   Medium Devices:  Tablets about page
+   (≥600px and <1280pxpx)
+   ========================================== */
+/* Medium devices: tablets (≥576px and <768px) */
+@media (min-width: 576px) and (max-width: 1023.98px) {
+  .block1 {
+    zoom: 0.5;
+  }
+
+  .about-img img,
+  .about-img2 img {
+    display: block;
+    width: 30rem;
+    height: 40rem;
+    object-fit: cover;
+    margin-bottom: 0.4rem;
+  }
+
+  .core {
+    zoom: 0.8;
+  }
+}
+
+/* ==========================================
+   Large Devices:Small Standard Laptops
+   (Up to 1366px) about page
+   ========================================== */
+@media (min-width: 1024px) and (max-width: 1366px) {
+  .block1 {
+    margin-left: 3rem;
+  }
+
+  .about-us {
+    margin-left: 2rem;
+  }
+
+  .about-us2 {
+    margin-top: 4rem;
+  }
+
+  .about-img img {
+    height: 22rem;
+    margin-right: 8rem;
+  }
+
+  .about-img2 img {
+    margin-left: 6rem;
+  }
+
+  .about-us h1,
+  .about-us2 h1 {
+    font-size: 3.5rem;
+    margin-left: 6rem;
+  }
+
+  .about-us p {
+    font-size: 1rem;
+    margin-left: 6rem;
+    max-width: 70%;
+  }
+
+  .about-us2 p {
+    font-size: 1rem;
+    margin-left: 3rem;
+    max-width: 65%;
+  }
+
+  .core-values-section h2 {
+    font-size: 3.5rem;
+  }
+
+  .label {
+    font-size: 1.05rem;
+  }
+
+  .bar-container {
+    height: 1.2rem;
+  }
+}
+
+/* @media (min-width: 1600px) {
+  .block1 {
+    zoom: 0.8;
+  }
+} */
+
+/* ==========================================
+   Small Devices: Phones (max-width: 575.98px)
+   services
+   ========================================== */
+@media (max-width: 575.98px) {
+  header {
+    zoom: 0.9;
+  }
+  .btn.d-lg-none {
+    font-size: 1.5rem; /* Make the hamburger bigger */
+    background-color: transparent; /* No background by default */
+    border: none; /* Remove default border */
+    color: #3a3776; /* Your primary brand color */
+    cursor: pointer;
+    padding: 0.25rem 0.5rem; /* Small padding */
+    line-height: 1;
+    transition: color 0.3s ease;
+    margin-right: -2rem;
+  }
+  /* Remove the offcanvas container shadow */
+  .offcanvas {
+    box-shadow: none !important;
+  }
+
+  /* Remove the dark overlay (backdrop) shadow */
+  .offcanvas-backdrop {
+    background-color: transparent !important;
+  }
+
+  .offcanvas-header .btn-close:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  /* Hover and focus states */
+  .btn.d-lg-none:hover,
+  .btn.d-lg-none:focus {
+    color: #232154; /* Darker shade on hover/focus */
+    outline: none; /* Remove default outline */
+  }
+  .offcanvas .nav-links {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .offcanvas .nav-links a {
+    text-decoration: none;
+    color: #000; /* black like desktop */
+    font-family: "InterDisplay-Medium", sans-serif;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border-bottom: none;
+    padding: 0.25rem 0;
+  }
+
+  .offcanvas .nav-links a:hover {
+    color: #3a3776;
+    border-bottom: 2px solid #3a3776;
+  }
+
+  /* Contact Button Styling - Offcanvas */
+  .offcanvas .contact-button a {
+    background-color: #3a3776;
+    padding: 10px 20px;
+    border-radius: 100px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    display: block;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+
+  .offcanvas .contact-button a:hover {
+    background-color: #232154;
+  }
+  #serve {
+    zoom: 0.8;
+  }
+  /* .gridy {
+    margin-bottom: 10rem;
+  } */
+
+  .service-cards {
+    display: block;
+  }
+
+  #cardy {
+    margin-right: 5rem;
+  }
+  .service-cards img {
+    width: 100%;
+    height: 325px;
+    object-fit: cover;
+  }
+  .services-title {
+    text-align: center;
+    margin-right: 3rem;
+    font-size: 2.5rem;
+  }
+}
+
+/* ==========================================
+   Medium Devices: Tablets (576px – 1023.98px)
+
+   services
+   ========================================== */
+@media (min-width: 576px) and (max-width: 1023.98px) {
+  /* Make the card rows stack vertically */
+  .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Make each column take full width */
+  .col-md-4 {
+    width: 100%;
+    max-width: 90%; /* Optional: to leave some margin */
+    margin-bottom: 2rem;
+  }
+
+  /* Center and resize individual cards */
+  .service-cards {
+    width: 100%;
+    max-width: 28rem;
+    margin: 0 auto;
+  }
+  #cardy {
+    margin-right: 5rem;
+  }
+
+  .services-title {
+    text-align: center;
+    font-size: 3.5rem;
+  }
+
+  .service-cards img {
+    width: 100%;
+    height: 455px;
+    object-fit: cover;
+  }
+}
+
+/* ==========================================
+   Small Devices: Phones (max-width: 575.98px)
+   team page
+   ========================================== */
+@media (max-width: 575.98px) {
+  header {
+    zoom: 0.9;
+  }
+  .btn.d-lg-none {
+    font-size: 1.5rem; /* Make the hamburger bigger */
+    background-color: transparent; /* No background by default */
+    border: none; /* Remove default border */
+    color: #3a3776; /* Your primary brand color */
+    cursor: pointer;
+    padding: 0.25rem 0.5rem; /* Small padding */
+    line-height: 1;
+    transition: color 0.3s ease;
+    margin-right: -2rem;
+  }
+  /* Remove the offcanvas container shadow */
+  .offcanvas {
+    box-shadow: none !important;
+  }
+
+  /* Remove the dark overlay (backdrop) shadow */
+  .offcanvas-backdrop {
+    background-color: transparent !important;
+  }
+
+  .offcanvas-header .btn-close:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  /* Hover and focus states */
+  .btn.d-lg-none:hover,
+  .btn.d-lg-none:focus {
+    color: #232154; /* Darker shade on hover/focus */
+    outline: none; /* Remove default outline */
+  }
+  .offcanvas .nav-links {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .offcanvas .nav-links a {
+    text-decoration: none;
+    color: #000; /* black like desktop */
+    font-family: "InterDisplay-Medium", sans-serif;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border-bottom: none;
+    padding: 0.25rem 0;
+  }
+
+  .offcanvas .nav-links a:hover {
+    color: #3a3776;
+    border-bottom: 2px solid #3a3776;
+  }
+
+  /* Contact Button Styling - Offcanvas */
+  .offcanvas .contact-button a {
+    background-color: #3a3776;
+    padding: 10px 20px;
+    border-radius: 100px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    display: block;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+
+  .offcanvas .contact-button a:hover {
+    background-color: #232154;
+  }
+
+  .headingss {
+    zoom: 0.65;
+  }
+
+  .headingss h1 {
+    font-size: 2.5rem;
+  }
+
+  .team-grid {
+    zoom: 0.6;
+  }
+}
+
+/* ==========================================
+   Small Devices: Phones (max-width: 575.98px)
+   client page
+   ========================================== */
+@media (max-width: 575.98px) {
+  header {
+    zoom: 0.9;
+  }
+  .btn.d-lg-none {
+    font-size: 1.5rem; /* Make the hamburger bigger */
+    background-color: transparent; /* No background by default */
+    border: none; /* Remove default border */
+    color: #3a3776; /* Your primary brand color */
+    cursor: pointer;
+    padding: 0.25rem 0.5rem; /* Small padding */
+    line-height: 1;
+    transition: color 0.3s ease;
+    margin-right: -2rem;
+  }
+  /* Remove the offcanvas container shadow */
+  .offcanvas {
+    box-shadow: none !important;
+  }
+
+  /* Remove the dark overlay (backdrop) shadow */
+  .offcanvas-backdrop {
+    background-color: transparent !important;
+  }
+
+  .offcanvas-header .btn-close:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  /* Hover and focus states */
+  .btn.d-lg-none:hover,
+  .btn.d-lg-none:focus {
+    color: #232154; /* Darker shade on hover/focus */
+    outline: none; /* Remove default outline */
+  }
+  .offcanvas .nav-links {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .offcanvas .nav-links a {
+    text-decoration: none;
+    color: #000; /* black like desktop */
+    font-family: "InterDisplay-Medium", sans-serif;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border-bottom: none;
+    padding: 0.25rem 0;
+  }
+
+  .offcanvas .nav-links a:hover {
+    color: #3a3776;
+    border-bottom: 2px solid #3a3776;
+  }
+
+  /* Contact Button Styling - Offcanvas */
+  .offcanvas .contact-button a {
+    background-color: #3a3776;
+    padding: 10px 20px;
+    border-radius: 100px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    display: block;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+
+  .offcanvas .contact-button a:hover {
+    background-color: #232154;
+  }
+
+  .heading h1 {
+    font-size: 1.5rem;
+  }
+
+  .heading p {
+    zoom: 0.67;
+    max-width: 95%;
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(1, 1fr); /* 1 column */
+    width: 90%;
+    transform: scale(1);
+    margin-top: 2rem;
+  }
+
+  .client {
+    height: auto;
+    padding: 1rem;
+  }
+
+  .grid-container > .client.special {
+    grid-column: span 1;
+  }
+}
+
+/* ==========================================
+   Medium Devices: Tablets (576px – 1023.98px)
+   client page
+   ========================================== */
+@media (min-width: 576px) and (max-width: 1023.98px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    width: 90%;
+    transform: scale(1);
+    margin-top: 1rem;
+    height: auto;
+  }
+
+  .client {
+    height: 10rem; /* fixed height */
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .grid-container > .client.special {
+    grid-column: span 2;
+  }
+}
+
+/* ==========================================
+   Small Devices: Phones (max-width: 575.98px)
+   gallery
+   ========================================== */
+@media (max-width: 575.98px) {
+  header {
+    zoom: 0.9;
+  }
+  .btn.d-lg-none {
+    font-size: 1.5rem; /* Make the hamburger bigger */
+    background-color: transparent; /* No background by default */
+    border: none; /* Remove default border */
+    color: #3a3776; /* Your primary brand color */
+    cursor: pointer;
+    padding: 0.25rem 0.5rem; /* Small padding */
+    line-height: 1;
+    transition: color 0.3s ease;
+    margin-right: -2rem;
+  }
+  /* Remove the offcanvas container shadow */
+  .offcanvas {
+    box-shadow: none !important;
+  }
+
+  /* Remove the dark overlay (backdrop) shadow */
+  .offcanvas-backdrop {
+    background-color: transparent !important;
+  }
+
+  .offcanvas-header .btn-close:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  /* Hover and focus states */
+  .btn.d-lg-none:hover,
+  .btn.d-lg-none:focus {
+    color: #232154; /* Darker shade on hover/focus */
+    outline: none; /* Remove default outline */
+  }
+  .offcanvas .nav-links {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .offcanvas .nav-links a {
+    text-decoration: none;
+    color: #000; /* black like desktop */
+    font-family: "InterDisplay-Medium", sans-serif;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border-bottom: none;
+    padding: 0.25rem 0;
+  }
+
+  .offcanvas .nav-links a:hover {
+    color: #3a3776;
+    border-bottom: 2px solid #3a3776;
+  }
+
+  /* Contact Button Styling - Offcanvas */
+  .offcanvas .contact-button a {
+    background-color: #3a3776;
+    padding: 10px 20px;
+    border-radius: 100px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    display: block;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+
+  .offcanvas .contact-button a:hover {
+    background-color: #232154;
+  }
+  .gallery {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+
+  .gallery a:nth-child(7n),
+  .gallery a:nth-child(11n),
+  .gallery a:nth-child(5n) {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+  .whole {
+    display: block;
+    margin-left: 1.3rem;
+    margin-bottom: 2rem;
+    margin-top: 0.6rem;
+  }
+}
+
+/* ==========================================
+   Medium Devices: Tablets (576px – 1023.98px)
+   gallery
+   ========================================== */
+@media (min-width: 576px) and (max-width: 1023.98px) {
+  .gallery {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .gallery a:nth-child(7n),
+  .gallery a:nth-child(11n),
+  .gallery a:nth-child(5n) {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+
+  .whole {
+    display: block;
+    margin-left: 2.5rem;
+    margin-bottom: 2rem;
+  }
+}
+
+/* ==========================================
+   Large Devices: Small Laptops (1024px – 1439px)
+   gallery
+   ========================================== */
+@media (min-width: 1024px) and (max-width: 1366px) {
+  .gallery {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+
+  .gallery a:nth-child(7n) {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  .gallery a:nth-child(11n) {
+    grid-row: span 2;
+  }
+
+  .gallery a:nth-child(5n) {
+    grid-column: span 2;
+  }
+  .whole {
+    display: block;
+    margin-left: 5rem;
+    margin-bottom: 2rem;
+  }
+}
+
+/* ==========================================
+   Extra Large Devices: Desktops (1440px and up)
+   gallery
+   ========================================== */
+/* @media (min-width: 1440px) {
+  .gallery {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+
+  .gallery a:nth-child(7n) {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  .gallery a:nth-child(11n) {
+    grid-row: span 2;
+  }
+
+  .gallery a:nth-child(5n) {
+    grid-column: span 2;
+  }
+
+  .whole {
+    display: block;
+    margin-left: 10rem;
+    margin-bottom: 2rem;
+  }
+} */
+
+/* ==========================================
+   Medium Devices: Tablets (576px – 1023.98px)
+   contact page
+   ========================================== */
+
+@media (max-width: 575.98px) {
+  .btn.d-lg-none {
+    font-size: 1.5rem; /* Make the hamburger bigger */
+    background-color: transparent; /* No background by default */
+    border: none; /* Remove default border */
+    color: #3a3776; /* Your primary brand color */
+    cursor: pointer;
+    padding: 0.25rem 0.5rem; /* Small padding */
+    line-height: 1;
+    transition: color 0.3s ease;
+    margin-right: -2rem;
+  }
+
+  header {
+    zoom: 0.9;
+  }
+  /* Remove the offcanvas container shadow */
+  .offcanvas {
+    box-shadow: none !important;
+  }
+
+  /* Remove the dark overlay (backdrop) shadow */
+  .offcanvas-backdrop {
+    background-color: transparent !important;
+  }
+
+  .offcanvas-header .btn-close:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  /* Hover and focus states */
+  .btn.d-lg-none:hover,
+  .btn.d-lg-none:focus {
+    color: #232154; /* Darker shade on hover/focus */
+    outline: none; /* Remove default outline */
+  }
+  .offcanvas .nav-links {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .offcanvas .nav-links a {
+    text-decoration: none;
+    color: #000; /* black like desktop */
+    font-family: "InterDisplay-Medium", sans-serif;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border-bottom: none;
+    padding: 0.25rem 0;
+  }
+
+  .offcanvas .nav-links a:hover {
+    color: #3a3776;
+    border-bottom: 2px solid #3a3776;
+  }
+
+  /* Contact Button Styling - Offcanvas */
+  .offcanvas .contact-button a {
+    background-color: #3a3776;
+    padding: 10px 20px;
+    border-radius: 100px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    display: block;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+
+  .offcanvas .contact-button a:hover {
+    background-color: #232154;
+  }
+
+  .contact-container {
+    zoom: 0.5;
+    margin-left: 3rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .contact-form {
+    margin-right: 2rem;
+  }
+}
+
+/* ==========================================
+   Medium Devices: Tablets (576px – 1023.98px)
+   Contact Page
+   ========================================== */
+@media (min-width: 576px) and (max-width: 1023.98px) {
+  .contact-container {
+    margin-left: 3rem;
+  }
+}
+
+/* ==========================================
+   Large Devices:Small Standard Laptops
+   (Up to 1366px) Contact Page
+   ========================================== */
+
+@media (min-width: 1024px) and (max-width: 1366px) {
+  .contact-container {
+    margin-left: 15rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  #blogs {
+    zoom: 0.75;
+  }
+
+  #blogs h1 {
+    font-size: 2.5rem;
+  }
+  #blog-full-view {
+    zoom: 0.9;
+  }
+
+  #go-back {
+    margin-top: -8rem;
+    zoom: 0.8;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 1023.98px) {
+  #blogs h1 {
+    font-size: 2.5rem;
+  }
+  /* #blogs {
+    gap: 3rem;
+  } */
+
+  .blog-post.card {
+    transform: scale(1.4); /* Slightly enlarge the cards */
+    margin-bottom: 4rem;
+    margin-top: 7rem;
+  }
+  #blog-full-view {
+    zoom: 0.9;
+  }
+
+  #go-back {
+    margin-top: -8rem;
+  }
+}

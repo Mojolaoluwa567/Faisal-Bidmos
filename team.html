@@ -3,211 +3,231 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Team</title>
-    <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon" />
-    <link rel="stylesheet" href="css/team.css" />
-    <link rel="stylesheet" href="/css/nav.css" />
+    <title>Team | Faisal Bidmos & co</title>
+    <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Favicon -->
+    <link rel="icon" href="img/FaisalBidmos-logo.webp" type="image/x-icon" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body class="page-container">
     <header>
-      <!-- Main Navigation -->
-      <nav>
+      <div class="header-container">
         <!-- Logo -->
-        <label class="logo">
-          <img src="images/logo.png" alt="Logo" />
-        </label>
+        <div class="logo">
+          <img src="img/FaisalBidmos-logo.webp" alt="Faisal Bidmos Logo" />
+        </div>
 
-        <!-- Navigation Links (Dropdown Menu) -->
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="team.html">Team</a></li>
-          <li><a href="clientelle.html">Clientele</a></li>
-          <li><a href="picturegallery.html">Picture Gallery</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-          <li><a href="blog.html">Publications & Circulars</a></li>
-          <!-- Close Button (X) -->
-        </ul>
-      </nav>
+        <!-- ☰ Toggle Button (mobile only) -->
+        <button
+          class="btn d-lg-none"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#mobileMenu"
+          aria-controls="mobileMenu"
+        >
+          ☰
+        </button>
 
-      <!-- Mobile Navigation (Offcanvas) -->
-      <nav class="navbar navbar-expand-md bg-body-tertiary" id="mobile">
-        <div class="container-fluid">
-          <!-- Logo -->
-          <label class="logo">
-            <img src="images/logo.png" alt="Logo" />
-          </label>
+        <!-- Desktop Navigation (visible on large screens) -->
+        <nav class="d-none d-lg-block">
+          <ul class="nav-links d-flex">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="clientele.html">Clientele</a></li>
+            <li><a href="gallery.html">Picture Gallery</a></li>
+            <li><a href="publications.html">Publications & Circulars</a></li>
+          </ul>
+        </nav>
 
-          <!-- Navbar Toggler (Opens Offcanvas) -->
+        <!-- Contact Button (visible on large screens) -->
+        <div class="contact-button d-none d-lg-block">
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+
+      <!-- Mobile Offcanvas Menu -->
+      <div
+        class="offcanvas offcanvas-start"
+        tabindex="-1"
+        id="mobileMenu"
+        aria-labelledby="mobileMenuLabel"
+        data-bs-backdrop="static"
+      >
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="mobileMenuLabel">Menu</h5>
           <button
-            class="navbar-toggler"
             type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#staticBackdrop"
-            aria-controls="staticBackdrop"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-            style="border: none; outline: none; box-shadow: none"
-          >
-            <span
-              class="navbar-toggler-icon"
-              style="border: none; outline: none; box-shadow: none"
-            ></span>
-          </button>
-
-          <!-- Offcanvas Sidebar -->
-          <div
-            class="offcanvas offcanvas-start"
-            data-bs-backdrop="false"
-            tabindex="-1"
-            id="staticBackdrop"
-            aria-labelledby="staticBackdropLabel"
-            style="width: 93%; box-shadow: none"
-          >
-            <div class="offcanvas-header">
-              <h5
-                class="offcanvas-title"
-                id="staticBackdropLabel"
-                style="color: white"
-              >
-                Menu
-              </h5>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="offcanvas"
-                aria-label="Close"
-                style="
-                  border: none;
-                  outline: none;
-                  box-shadow: none;
-                  background-color: white;
-                "
-              ></button>
-            </div>
-            <div class="offcanvas-body" style="box-shadow: none">
-              <nav class="navbar-nav" style="box-shadow: none">
-                <a class="nav-link" href="index.html">Home</a>
-                <a class="nav-link" href="about.html">About</a>
-                <a class="nav-link" href="services.html">Services</a>
-                <a class="nav-link" href="team.html">Team</a>
-                <a class="nav-link" href="clientelle.html">Clients</a>
-                <a class="nav-link" href="picturegallery.html">Gallery</a>
-                <a class="nav-link" href="contact.html">Contact</a>
-                <a class="nav-link" href="blog.html">Blog</a>
-              </nav>
-            </div>
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="nav-links flex-column">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="clientele.html">Clientele</a></li>
+            <li><a href="gallery.html">Picture Gallery</a></li>
+            <li><a href="publications.html">Publications & Circulars</a></li>
+          </ul>
+          <div class="contact-button mt-4">
+            <a href="contact.html">Contact</a>
           </div>
         </div>
-      </nav>
+      </div>
     </header>
 
-    <body>
     <main class="team-container">
-        <section class="heading" data-aos="fade-up">
-            <h1>Meet the Team</h1>
-            <p>Our dynamic team combines a wealth of experience and a passion for excellence.
-               We work together to provide tailored solutions that drive success and ensure your business’s financial health and transparency.</p>
-        </section>
+      <section class="headingss" data-aos="fade-up">
+        <h1>Meet the Team</h1>
+        <p>
+          Our dynamic team combines a wealth of experience and a passion for
+          excellence. We work together to provide tailored solutions that drive
+          success and ensure your business’s financial health and transparency.
+        </p>
+      </section>
 
-        <div class="team-grid">
-            <div class="team-member" data-aos="zoom-in"  data-aos-delay="950">
-                <img src="../images/member1.png" alt="Mr Faisal Bidmos">
-                <h2>Mr Faisal Bidmos FCA</h2>
-                <h5>Team Lead / Managing Consultant</h5>
-                <p>Faisal Bidmos is a Fellow of ICAN and an Associate of CITN, with an MBA in Finance from the University of Lagos. He has over 20 years of experience in the Nigerian corporate space, including roles in banking and financial consulting.</p>
-            </div>
+      <div class="team-grid">
+        <!-- Team Member 1 -->
+        <article class="team-member" data-aos="fade-up">
+          <div class="image-wrapper">
+            <img src="img/image preview.webp" alt="Mr Faisal Bidmos" />
+          </div>
+          <div class="member-info">
+            <h2>Mr Faisal Bidmos FCA</h2>
+            <h5>Team Lead / Managing Consultant</h5>
+            <p>
+              Faisal Bidmos is a Fellow of ICAN and Associate of CITN. He holds
+              an MBA in Finance and a degree in Mathematics from University of
+              Lagos. With over 20 years of professional experience, he has
+              worked with Access Bank, Equity Bank, and Intercontinental Bank,
+              holding roles in Strategy, MIS, and Financial Control. He is now
+              the Managing Partner of Faisal Bidmos & Co., and a well-respected
+              forensic auditor and advisor in financial Nigeria.
+            </p>
+          </div>
+        </article>
 
-            <div class="team-member" data-aos="zoom-in"  data-aos-delay="1200">
-                <img src="../images/member3.png" alt="Mr Opeyemi Ogundele">
-                <h2>Mr Opeyemi Ogundele FCA</h2>
-                <h5>Associate Consultant</h5>
-                <p>With nearly two decades in finance and accounting, Opeyemi Ogundele is a Fellow of ICAN and a B.Sc. graduate from the University of Ibadan. He has expertise in auditing, tax, and consultancy.</p>
-            </div>
+        <!-- Team Member 2 -->
+        <article class="team-member" data-aos="fade-up">
+          <div class="image-wrapper">
+            <img
+              src="img/WhatsApp Image 2022-12-08 at 10_56_edited.webp"
+              alt="Mr Opeyemi Ogundele"
+            />
+          </div>
+          <div class="member-info">
+            <h2>Mr Opeyemi Ogundele FCA</h2>
+            <h5>Associate Consultant</h5>
+            <p>
+              Opeyemi Ogundele is a Fellow of ICAN with over 18 years of
+              experience in auditing, finance, and training. He has served in
+              leadership roles at John O.G. Group, Foodco, and various audit
+              firms. He also coordinates ICAN tuition at Uplink Professionals
+              and runs his own firm, Moses Ogundele & Co. He is active in
+              Christian missions and public speaking.
+            </p>
+          </div>
+        </article>
 
-            <div class="team-member" data-aos="zoom-in"  data-aos-delay="1400">
-                <img src="../images/member4.png" alt="Mr Ganiu Muniru">
-                <h2>Mr Ganiu Muniru</h2>
-                <h5>Peer Review Partner</h5>
-                <p>An accredited auditor for USA government-funded projects, Ganiu Muniru has led numerous audits across Africa, including for USAID, UNICEF, and USADF.</p>
-            </div>
+        <!-- Team Member 3 -->
+        <article class="team-member" data-aos="fade-up">
+          <div class="image-wrapper">
+            <img
+              src="img/WhatsApp Image 2023-01-20 at 21_22_35.webp"
+              alt="Mr Ganiu Muniru"
+            />
+          </div>
+          <div class="member-info">
+            <h2>Mr Ganiu Muniru</h2>
+            <h5>Peer Review Partner</h5>
+            <p>
+              Mr. Muniru is an expert auditor for U.S. government-funded
+              projects including those by USAID, UNICEF, and USCDC. With over
+              two decades of experience, he has led audits for FHI 360, NEDC,
+              and Catholic Caritas. He is an IFRS expert and chairman of the
+              IFRS Implementation Team at Parker Randall Nigeria. He studied at
+              the Polytechnic Ibadan and is a chartered accountant.
+            </p>
+          </div>
+        </article>
 
-            <div class="team-member" data-aos="zoom-in"  data-aos-delay="1800">
-                <img src="../images/member5.png" alt="Ayodele Lasisi">
-                <h2>Ayodele Lasisi ACA</h2>
-                <h5>Associate Consultant</h5>
-                <p>A financial modeling and valuation analyst, Ayodele Lasisi has a degree in Accounting and is an associate of ICAN. He has deep expertise in tax, finance, and internal controls.</p>
-            </div>
+        <!-- Team Member 4 -->
+        <article class="team-member" data-aos="fade-up">
+          <div class="image-wrapper">
+            <img
+              src="img/WhatsApp Image 2022-12-09 at 4_10_39 PM.webp"
+              alt="Ayodele Lasisi"
+            />
+          </div>
+          <div class="member-info">
+            <h2>Ayodele Lasisi ACA</h2>
+            <h5>Associate Consultant</h5>
+            <p>
+              Ayodele Lasisi is a financial modelling and valuation analyst with
+              a B.Sc in Accounting from OAU. He is an ACA and is pursuing
+              further qualifications including CISA and CITN. AYO has experience
+              in tax, data analysis, and internal controls.
+            </p>
+          </div>
+        </article>
 
-            <div class="team-member"data-aos="zoom-in"  data-aos-delay="2200">
-                <img src="../images/member6.png" alt="Mr Olatunde Ibrahim">
-                <h2>Mr Olatunde Ibrahim ACA</h2>
-                <h5>Associate Consultant</h5>
-                <p>With vast experience in financial consultancy, Olatunde Ibrahim is a chartered accountant specializing in forensic auditing and fund recovery.</p>
-            </div>
-        </div>
+        <!-- Team Member 5 -->
+        <article class="team-member" data-aos="fade-up">
+          <div class="image-wrapper">
+            <img
+              src="img/WhatsApp Image 2023-03-08 at 19_56_edited.webp"
+              alt="Mr Olatunde Ibrahim"
+            />
+          </div>
+          <div class="member-info">
+            <h2>Mr Olatunde Ibrahim ACA</h2>
+            <h5>Associate Consultant</h5>
+            <p>
+              Mr. Ibrahim is a seasoned accountant with decades of experience in
+              NICON and A. Lawal & Co. He now runs his own firm, Complete
+              Solution Consult, specializing in financial and forensic services.
+              He is a chartered accountant and family man.
+            </p>
+          </div>
+        </article>
+      </div>
     </main>
 
-    <!-- Footer -->
     <footer>
-      <div class="footer-container">
-        <!-- Logo and Copyright -->
-        <div class="footer-logo">
-          <h6>Faisal Bidmos</h6>
-          <p>Copyright © 2020 Faisal Bidmos and co<br />All rights reserved</p>
-          <div class="social-icons">
-            <a href="#"><img src="../Icons/instagram.png" alt="Instagram" /></a>
-            <a href="#"><img src="../Icons/facebook.png" alt="Facebook" /></a>
-            <a href="#"><img src="../Icons/linkedin.png" alt="LinkedIn" /></a>
-          </div>
-        </div>
+      <div class="footer-content">
+        <img
+          src="img/FaisalBidmos-logo.webp"
+          alt="Faisal Bidmos Logo"
+          class="footer-logo"
+        />
+        <p>FINANCIAL AUDITING | TAX MANAGEMENT | ACCOUNTING SERVICES</p>
+        <p>+2348052606915, +2348130735028, +2349052597020</p>
 
-        <!-- Company Links -->
-        <div class="footer-section">
-          <h3>Company</h3>
-            <ul>
-              <li><a href="about.html">About us</a></li>
-              <li><a href="blog.html">Blog</a></li>
-              <li><a href="contact.html">Contact us</a></li>
-              <li><a href="clientelle.html">Clientele</a></li>
-              <li><a href="picturegallery.html">Picture Gallery</a></li>
-          </ul>
-        </div>
+        <form>
+          <input type="email" placeholder="Email *" required />
+          <button type="submit">Subscribe</button>
+        </form>
 
-        <!-- Contact Info -->
-        <div class="footer-section">
-          <h3>Contact</h3>
-          <ul>
-            <li><a href="tel:+2348052606915">+2348052606915</a></li>
-            <li><a href="tel:+2348130735028">+2348130735028</a></li>
-            <li><a href="tel:+2349052597020">+2349052597020</a></li>
-            <li><a href="mailto:fbidmos@gmail.com">fbidmos@gmail.com</a></li>
-            <li>
-              <a href="mailto:info@faisalbidmos.com">info@faisalbidmos.com</a>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Subscription Form -->
-        <div class="footer-section">
-          <h3>Stay up to date</h3>
-          <form action="#" method="post">
-            <input type="email" placeholder="Your email address" required />
-            <button type="submit">
-              <img src="../Icons/sendwhite.png" alt="submit" />
-            </button>
-          </form>
-        </div>
+        <p class="footer-note">Join our mailing list</p>
       </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
     </script>
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>

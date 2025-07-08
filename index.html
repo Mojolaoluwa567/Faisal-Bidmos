@@ -3,353 +3,491 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
-    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
-    <link rel="stylesheet" href="css/home.css" />
-    <link rel="stylesheet" href="/css/nav.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <title>Home| Faisal Bidmos & co</title>
+    <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+   
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/FaisalBidmos-logo.webp" type="image/x-icon" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
     />
+
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <header>
-      <!-- Main Navigation -->
-      <nav>
-        <!-- Logo -->
-        <label class="logo">
-          <img src="images/logo.png" alt="Logo" />
-        </label>
+  <body class="page-container">
+    <div datas-scroll-container>
+      <!-- NAVBAR -->
 
-        <!-- Navigation Links (Dropdown Menu) -->
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="team.html">Team</a></li>
-          <li><a href="clientelle.html">Clientele</a></li>
-          <li><a href="picturegallery.html">Picture Gallery</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-          <li><a href="blog.html">Publications & Circulars</a></li>
-          <!-- Close Button (X) -->
-        </ul>
-      </nav>
-
-      <!-- Mobile Navigation (Offcanvas) -->
-      <nav class="navbar navbar-expand-md bg-body-tertiary" id="mobile">
-        <div class="container-fluid">
+      <header>
+        <div class="header-container">
           <!-- Logo -->
-          <label class="logo">
-            <img src="images/logo.png" alt="Logo" />
-          </label>
+          <div class="logo">
+            <img src="img/FaisalBidmos-logo.webp" alt="Faisal Bidmos Logo" />
+          </div>
 
-          <!-- Navbar Toggler (Opens Offcanvas) -->
+          <!-- ☰ Toggle Button (mobile only) -->
           <button
-            class="navbar-toggler"
+            class="btn d-lg-none"
             type="button"
             data-bs-toggle="offcanvas"
-            data-bs-target="#staticBackdrop"
-            aria-controls="staticBackdrop"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-            style="border: none; outline: none; box-shadow: none"
+            data-bs-target="#mobileMenu"
+            aria-controls="mobileMenu"
           >
-            <span
-              class="navbar-toggler-icon"
-              style="border: none; outline: none; box-shadow: none"
-            ></span>
+            ☰
           </button>
 
-          <!-- Offcanvas Sidebar -->
+          <!-- Desktop Navigation (visible on large screens) -->
+          <nav class="d-none d-lg-block">
+            <ul class="nav-links d-flex">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="team.html">Team</a></li>
+              <li><a href="clientele.html">Clientele</a></li>
+              <li><a href="gallery.html">Picture Gallery</a></li>
+              <li><a href="publications.html">Publications & Circulars</a></li>
+            </ul>
+          </nav>
+
+          <!-- Contact Button (visible on large screens) -->
+          <div class="contact-button d-none d-lg-block">
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+
+        <!-- Mobile Offcanvas Menu -->
+        <div
+          class="offcanvas offcanvas-start"
+          tabindex="-1"
+          id="mobileMenu"
+          aria-labelledby="mobileMenuLabel"
+          data-bs-backdrop="static"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="mobileMenuLabel">Menu</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="nav-links flex-column">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="team.html">Team</a></li>
+              <li><a href="clientele.html">Clientele</a></li>
+              <li><a href="gallery.html">Picture Gallery</a></li>
+              <li><a href="publications.html">Publications & Circulars</a></li>
+            </ul>
+            <div class="contact-button mt-4">
+              <a href="contact.html">Contact</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="content-wrap" id="all">
+        <section class="top">
+          <div class="overlay">
+            <div id="hero-section">
+              <img
+                src="img/image55.webp"
+                alt="Faisal Bidmos Logo"
+                id="hero-img"
+                class="desktop-img"
+              />
+            </div>
+
+            <div class="mob-img">
+              <img
+                src="img/image1.webp"
+                alt="Mobile image"
+                class="mobile-img"
+              />
+            </div>
+
+            <!-- Dropdown Buttons -->
+            <article class="dropdown-section">
+              <div class="dropdown-wrapper">
+                <h2 class="dropdown-heading">Precision. Integrity. Results.</h2>
+
+                <div class="dropdown-group">
+                  <!-- Financial Auditing -->
+                  <div class="dropdown">
+                    <a
+                      class="btn btn-secondary dropdown-toggle"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Financial Auditing
+                    </a>
+                    <ul class="dropdown-menu p-3">
+                      <li>
+                        √ Audit starts with evaluating internal controls,
+                        management systems, and risk profiling.
+                      </li>
+                      <li>
+                        √ We emphasize data integrity, using substantive testing
+                        to detect issues where internal control is weak.
+                      </li>
+                      <li class="mt-2">
+                        <a class="btn btn-sm btn-outline-primary" href="services.html"
+                          >Read More</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- Tax Management -->
+                  <div class="dropdown">
+                    <a
+                      class="btn btn-secondary dropdown-toggle"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Tax Management
+                    </a>
+                    <ul class="dropdown-menu p-3">
+                      <li>
+                        √ We use the right tools and procedures for audits with
+                        professionalism and independence.
+                      </li>
+                      <li>
+                        √ Services include tax advisory, planning, and
+                        installing efficient tax procedures.
+                      </li>
+                      <li class="mt-2">
+                        <a class="btn btn-sm btn-outline-primary" href="services.html"
+                          >Read More</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- Accounting Services -->
+                  <div class="dropdown">
+                    <a
+                      class="btn btn-secondary dropdown-toggle"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Accounting Services
+                    </a>
+                    <ul class="dropdown-menu p-3">
+                      <li>
+                        √ Preparation of financial and management accounts with
+                        visual reporting
+                      </li>
+                      <li>
+                        √ Advanced Excel for financial analysis, MPR, ALCO,
+                        Camel Ratios & more
+                      </li>
+                      <li class="mt-2">
+                        <a class="btn btn-sm btn-outline-primary" href="services.html"
+                          >Read More</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- Enterprise Risk Management -->
+                  <div class="dropdown">
+                    <a
+                      class="btn btn-secondary dropdown-toggle"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Enterprise Risk Management
+                    </a>
+                    <ul class="dropdown-menu p-3">
+                      <li>
+                        √ Perform risk assessments, identify critical accounting
+                        matters, and plan audit approach
+                      </li>
+                      <li>
+                        √ Evaluate and test controls, assess risks, and perform
+                        substantive procedures
+                      </li>
+                      <li class="mt-2">
+                        <a class="btn btn-sm btn-outline-primary" href="services.html"
+                          >Read More</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- More -->
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="write-up1">
+          <div class="texcy" data-aos="fade-up" >
+            <h1>Who we are</h1>
+            <p>
+              Providing the best external audit , forensic accounting and tax
+              management services to our clients. Our team of highly experienced
+              professionals is dedicated to delighting you with world class
+              prompt , accurate reporting , tax filing and excellent service
+              delivery. ​ We provide tailor-made solutions to corporate needs
+              from financial statements preparation to tax planning. Our team is
+              passionate about helping you achieve your financial goals and our
+              commitment to delivering the best possible results is what sets us
+              apart. We strive to ensure that you make the most of your
+              resources by providing you with the best financial and tax
+              management services.
+            </p>
+          </div>
+        </section>
+
+        <section class="boxes">
+          <div class="box" data-aos="fade-up">
+            <h1>About Us</h1>
+            <p>
+              √ We are a world class audit firm mirroring international best
+              practise in the delivery of our professional services to our
+              clients. ​ <br />√ Faisal Bidmos and co has a team of qualified
+              professional accountants with wealth of experience , integrity and
+              pedigree. ​ <br />√ The firm is licensed to practise by the
+              Institute of Chartered Accountants of Nigeria ICAN
+            </p>
+          </div>
+          <div class="box" data-aos="fade-up">
+            <h1>Publications & Circulars</h1>
+            <p>
+              √ Social costs of CBN reforms: FX stability gained, but inflation
+              remains high (~24%). <br />√ Capital adequacy: CBN maintains
+              strict bank capital requirements. <br />
+              √ Certificate of acceptance: No recent update issued. <br />
+              √ FAAC shares ₦1.659 trillion for May 2025 revenue. FGN approves
+              ₦54.99 trillion national budget for 2025.
+            </p>
+          </div>
+          <div class="box" data-aos="fade-up">
+            <h1>How We Can Help</h1>
+            <p>
+              + We help you with tax planning and management and resolving VAT
+              and WHT issues with FIRS <br />​ + Preparation of your annual
+              audited financial statements AFS using international financial
+              reporting standards IFRS <br />​ + Helping you to collect your tax
+              clearance certificates seamlessly and promptly ​ <br />+ Helping
+              you with your PAYEE remittance to LIRS and other state internal
+              revenue services
+            </p>
+          </div>
+        </section>
+
+        <section class="both" data-aos="fade-up">
           <div
-            class="offcanvas offcanvas-start"
-            data-bs-backdrop="false"
-            tabindex="-1"
-            id="staticBackdrop"
-            aria-labelledby="staticBackdropLabel"
-            style="width: 93%; box-shadow: none"
+            class="value"
+            data-scroll
+            data-scroll-speed="1"
+            data-scroll-delay="0.05"
           >
-            <div class="offcanvas-header">
-              <h5
-                class="offcanvas-title"
-                id="staticBackdropLabel"
-                style="color: white"
-              >
-                Menu
-              </h5>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="offcanvas"
-                aria-label="Close"
+            <h1>Additional value added <br />service</h1>
+            <p>
+              + Help you to write your business plans and feasibility
+              studies.<br />
+              + Help you conduct forensic audit and resolving excess bank
+              charges with your banks <br />
+              + Organize your management retreats, budget seminars and anchoring
+              the proceedings<br />
+              culminating in the preparation of communique highlighting key
+              issues and decisions.
+            </p>
+            <a href="services.html" class="value-btn">Read More</a>
+          </div>
+
+          <div
+            class="value-img"
+            data-scroll
+            data-scroll-speed="2"
+            data-scroll-delay="0.1"
+          >
+            <img src="img/image1.webp" alt="Value Image" />
+          </div>
+        </section>
+
+        <article class="move" data-scroll-section>
+          <div
+            class="some-of-our"
+            data-scroll
+            data-scroll-speed="1"
+            data-scroll-direction="vertical"
+          >
+            <h1>Some Of Our Services Include</h1>
+            <p>
+              We provide essential financial services to enhance your business’s
+              health. Our financial auditing ensures accurate and compliant
+              statements, fostering trust. With our accounting services, we
+              maintain precise records, allowing you to focus on growth. Our tax
+              management solutions minimize liabilities and ensure compliance.
+              Together, these services support your business’s success.
+            </p>
+          </div>
+        </article>
+
+        <!-- Services Section -->
+        <section class="services">
+          <!-- Service Card 1 -->
+          <div class="service-card" data-aos="fade-up">
+            <img src="img/image2.webp" alt="Financial Auditing" />
+            <div class="card-content">
+              <h3>Financial Auditing</h3>
+              <a href="services.html" class="read-more">Read more →</a>
+            </div>
+          </div>
+
+          <!-- Service Card 2 -->
+          <div class="service-card" data-aos="fade-up">
+            <img src="img/image4.webp" alt="Tax Management" />
+            <div class="card-content">
+              <h3>Tax Management</h3>
+              <a href="services.html" class="read-more">Read more →</a>
+            </div>
+          </div>
+
+          <!-- Service Card 3 -->
+          <div class="service-card" data-aos="fade-up">
+            <img src="img/image3.webp" alt="Accounting Services" />
+            <div class="card-content">
+              <h3>Accounting Services</h3>
+              <a href="services.html" class="read-more">Read more →</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="why">
+          <div class="viddy" data-aos="fade-up">
+            <div style="position: relative; width: 100%; max-width: 600px">
+              <video
+                id="myVideo"
+                src="video/WhatsApp Video 2023-01-26 at 21.18.59.mp4"
+                playsinline
+                controls
+                muted
+                autoplay
+                style="width: 100%; display: block"
+              ></video>
+
+              <div
                 style="
-                  border: none;
-                  outline: none;
-                  box-shadow: none;
-                  background-color: white;
+                  position: absolute;
+                  top: 10px;
+                  right: 10px;
+                  background: rgba(255, 255, 255, 0.7);
+                  padding: 5px 10px;
+                  border-radius: 8px;
+                  font-weight: bold;
+                  color: #3a3776;
+                  pointer-events: none;
                 "
-              ></button>
-            </div>
-            <div class="offcanvas-body" style="box-shadow: none">
-              <nav class="navbar-nav" style="box-shadow: none">
-                <a class="nav-link" href="index.html">Home</a>
-                <a class="nav-link" href="about.html">About</a>
-                <a class="nav-link" href="services.html">Services</a>
-                <a class="nav-link" href="team.html">Team</a>
-                <a class="nav-link" href="clientelle.html">Clients</a>
-                <a class="nav-link" href="picturegallery.html">Gallery</a>
-                <a class="nav-link" href="contact.html">Contact</a>
-                <a class="nav-link" href="blog.html">Blog</a>
-              </nav>
+              >
+                Double click
+              </div>
             </div>
           </div>
-        </div>
-      </nav>
-    </header>
-    <main>
-      <div id="carouselExample" class="carousel slide">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img
-              src="images/image_fx_ (3).jpg"
-              class="d-block w-100"
-              alt="..."
-            />
-          </div>
-        </div>
-      </div>
 
-      <div class="content-container">
-        <div class="text-content">
-          <h1 data-aos="fade-up">
-            FAISAL BIDMOS <br />
-            <span>AND CO</span>
-          </h1>
-          <p data-aos="fade-up" data-aos-delay="950" data-aos-duration="1000">
-            We are The best at expert guidance, reliable audits, and innovative
-            tax solutions all tailored to help you and your business thrive.
+          <div class="us">
+            <h1>Why Choose Us</h1>
+            <p>
+              We are a team of highly experienced personnel who are ready to
+              work hard for you. We are always available to answer questions,
+              provide expert advice, and help you make the best financial
+              decisions. Our professionals have years of experience in the
+              financial industry and can provide you with the most up-to-date
+              information.
+            </p>
+            <a href="about.html" class="why-btn">Read More</a>
+          </div>
+        </section>
+
+        <section class="clients" >
+          <h2>Clientele</h2>
+          <p>
+            Our clientele consists of a diverse range of businesses and
+            organizations that trust us for excellence, integrity, and value.
+            From startups to established corporations, we are proud to serve
+            clients across various sectors including manufacturing, finance,
+            real estate, education, and technology. Their continued partnership
+            reflects our commitment to delivering dependable and results-driven
+            solutions.
           </p>
-        </div>
-        <div class="circle-image">
+
+          <div class="scroll-wrapper">
+            <div class="logo-scroll" id="logoScroll">
+              <img src="img/Anton&Pearl.webp" alt="Anton & Pearl Logo" />
+              <img src="img/Arams.webp" alt="Arams Logo" />
+              <img src="img/B channel.webp" alt="B Channel Logo" />
+              <img src="img/bergerpaints.webp" alt="Berger Paints Logo" />
+              <img src="img/Berkshire-2.webp" alt="Berkshire Logo" />
+              <img src="img/bravos.webp" alt="Bravos Logo" />
+              <img src="img/congelics.webp" alt="Congelics Logo" />
+              <img src="img/Emorego.webp" alt="Emorego Logo" />
+              <img src="img/Finex.webp" alt="Finex Logo" />
+              <img src="img/hensmor.webp" alt="Hensmor Logo" />
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <div class="footer-content">
           <img
-            src="images/Group 1.png"
-            data-aos="fade-up"
-            data-aos-delay="1150"
+            src="img/FaisalBidmos-logo.webp"
+            alt="Faisal Bidmos Logo"
+            class="footer-logo"
           />
-        </div>
-      </div>
+          <p>FINANCIAL AUDITING | TAX MANAGEMENT | ACCOUNTING SERVICES</p>
+          <p>+2348052606915, +2348130735028, +2349052597020</p>
+          <!-- 
+        <div class="socials">
+          <a href="#"><img src="img/Anton&Pearl.webp" alt="Instagram" /></a>
+          <a href="#"><img src="img/Arams.webp" alt="Facebook" /></a>
+          <a href="#"><img src="img/B channel.webp" alt="Twitter" /></a>
+          <a href="#"><img src="img/bergerpaints.webp" alt="LinkedIn" /></a>
+          <a href="#"><img src="img/Berkshire.webp" alt="YouTube" /></a>
+          <a href="#"><img src="img/bravos.webp" alt="TikTok" /></a>
+          <a href="#"><img src="img/congelics.webp" alt="Instagram" /></a>
+          <a href="#"><img src="img/Emorego.webp" alt="Facebook" /></a>
+          <a href="#"><img src="img/Finex.webp" alt="Twitter" /></a>
+          <a href="#"><img src="img/hensmor.webp" alt="LinkedIn" /></a>
+        </div> -->
 
-      <div
-        data-aos="fade-up"
-        class="who-we-are"
-        data-aos-delay="2000"
-        data-aos-duration="1000"
-      >
-        <h4>Who We are</h4>
-        <p>
-          Providing the best external audit , forensic accounting and tax
-          management services to our clients. Our team of highly experienced
-          professionals is dedicated to delighting you with world class prompt ,
-          accurate reporting , tax filing and excellent service delivery. We
-          provide tailor-made solutions to corporate needs from financial
-          statements preparation to tax planning.Our team is passionate about
-          helping you achieve your financial goals and our commitment to
-          delivering the best possible results is what sets us apart. We strive
-          to ensure that you make the most of your resources by providing you
-          with the best financial and tax management services.
-        </p>
-      </div>
-
-      <div class="card-container" data-aos="fade-up">
-        <div class="card">
-          <img src="Icons/icon1.png" alt="About Us Icon" class="card-icon" />
-          <h3>About Us</h3>
-          <p>
-            We are a leading audit firm, delivering top-quality services with a
-            team of experienced accountants. Licensed by ICAN, Faisal Bidmos &
-            Co. ensures integrity and professionalism in every solution.
-          </p>
-          <button class="read-more-btn">
-            <a href="about.html">Read More</a>
-          </button>
-        </div>
-
-        <div class="card">
-          <img
-            src="Icons/icon2.png"
-            alt="Publications Icon"
-            class="card-icon"
-          />
-          <h3>Publications & Circulars</h3>
-          <p>
-            CBN reforms in Nigeria emphasize maintaining Capital Adequacy Ratio
-            for financial stability. In June 2023, FAAC allocated N907.054
-            billion, while the Senate approved a N21.8 trillion appropriation
-            bill. A public notice also called for the submission of the
-            certificate of acceptance.
-          </p>
-          <button class="read-more-btn">
-            <a href="blog.html">Read More</a>
-          </button>
-        </div>
-
-        <div class="card">
-          <img src="Icons/icon3.png" alt="Help Icon" class="card-icon" />
-          <h3>How We can Help</h3>
-          <p>
-            We assist with tax planning, VAT and WHT resolution, and provide
-            seamless tax clearance certificate collection. We also prepare
-            audited financial statements (AFS) under IFRS standards and handle
-            PAYEE remittance to LIRS and other state tax services.
-          </p>
-          <button class="read-more-btn">
-            <a href="services.html">Read More</a>
-          </button>
-        </div>
-      </div>
-
-      <div data-aos="fade-up" class="section-cont" id="cont">
-        <div class="image-container">
-          <img
-            src="images/homepage 5.jpeg"
-            alt="avad image"
-            class="rectangular-image"
-          />
-        </div>
-
-        <div class="additional">
-          <h5>Additional Value Added Services</h5>
-          <p>
-            We assist in writing business plans and feasibility studies,
-            conducting forensic audits to resolve excess bank charges, and
-            organizing management retreats and budget seminars. Our services
-            culminate in preparing communiqués that highlight key issues and
-            decisions.
-          </p>
-          <button class="learn-more-btn">
-            <a href="about.html">Learn More</a>
-          </button>
-        </div>
-      </div>
-
-      <div data-aos="fade-up" class="some-of-our">
-        <h4>Some Of Our Services Include</h4>
-
-        <p>
-          We provide essential financial services to enhance your business’s
-          health. Our financial auditing ensures accurate and compliant
-          statements, fostering trust. With our accounting services, we maintain
-          precise records, allowing you to focus on growth. Our tax
-          management solutions minimize liabilities and ensure compliance.
-          Together, these services support your business’s success.
-        </p>
-      </div>
-
-      <!-- Services Section -->
-      <section class="services">
-        <!-- Service Card 1 -->
-        <div data-aos="fade-up" class="service-card">
-          <img src="images/Hompage 2.jpeg" alt="Financial Auditing" />
-          <div class="card-content">
-            <h3>Financial Auditing</h3>
-            <a href="services.html" class="read-more">Read more →</a>
-          </div>
-        </div>
-
-        <!-- Service Card 2 -->
-        <div data-aos="fade-up" class="service-card">
-          <img src="images/homepage3.jpeg" alt="Tax Management" />
-          <div class="card-content">
-            <h3>Tax Management</h3>
-            <a href="services.html" class="read-more">Read more →</a>
-          </div>
-        </div>
-
-        <!-- Service Card 3 -->
-        <div data-aos="fade-up" class="service-card">
-          <img src="images/hompage1.jpeg" alt="Accounting Services" />
-          <div class="card-content">
-            <h3>Accounting Services</h3>
-            <a href="services.html" class="read-more">Read more →</a>
-          </div>
-        </div>
-      </section>
-
-      <!-- Call to Action Section -->
-      <section data-aos="fade-up" class="cta-section">
-        <h2>Need our services? Schedule</h2>
-        <h2><span>Your Consultation Today!</span></h2>
-        <button class="cta-button">
-          <a href="contact.html">Contact Us</a> →
-        </button>
-      </section>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-      <div class="footer-container">
-        <!-- Logo and Copyright -->
-        <div class="footer-logo">
-          <h6>Faisal Bidmos</h6>
-          <p>Copyright © 2020 Faisal Bidmos and co<br />All rights reserved</p>
-          <div class="social-icons">
-            <a href="#"><img src="Icons/instagram.png" alt="Instagram" /></a>
-            <a href="#"><img src="Icons/facebook.png" alt="Facebook" /></a>
-            <a href="#"><img src="Icons/linkedin.png" alt="LinkedIn" /></a>
-          </div>
-        </div>
-
-        <!-- Company Links -->
-        <div class="footer-section">
-          <h3>Company</h3>
-          <ul>
-            <li><a href="about.html">About us</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html">Contact us</a></li>
-            <li><a href="clientelle.html">Clientele</a></li>
-            <li><a href="picturegallery.html">Picture Gallery</a></li>
-          </ul>
-        </div>
-
-        <!-- Contact Info -->
-        <div class="footer-section">
-          <h3>Contact</h3>
-          <ul>
-            <li><a href="tel:+2348052606915">+2348052606915</a></li>
-            <li><a href="tel:+2348130735028">+2348130735028</a></li>
-            <li><a href="tel:+2349052597020">+2349052597020</a></li>
-            <li><a href="mailto:fbidmos@gmail.com">fbidmos@gmail.com</a></li>
-            <li>
-              <a href="mailto:info@faisalbidmos.com">info@faisalbidmos.com</a>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Subscription Form -->
-        <div class="footer-section">
-          <h3>Stay up to date</h3>
-          <form action="#" method="post">
-            <input type="email" placeholder="Your email address" required />
-            <button type="submit">
-              <img src="Icons/sendwhite.png" alt="submit" />
-            </button>
+          <form>
+            <input type="email" placeholder="Email *" required />
+            <button type="submit">Subscribe</button>
           </form>
+
+          <p class="footer-note">Join our mailing list</p>
         </div>
-      </div>
-    </footer>
+      </footer>
 
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="script.js"></script>
+
+
+      <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
     <script>
       AOS.init();
     </script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
   </body>
 </html>

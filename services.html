@@ -1,353 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Meta tags for character set and responsiveness -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Services</title>
-    <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon" />
-    <!-- Linking stylesheets -->
-    <link rel="stylesheet" href="css/services.css" />
-    <link rel="stylesheet" href="/css/nav.css" />
+    <title>Services | Faisal Bidmos & co</title>
+    <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    />
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/FaisalBidmos-logo.webp" type="image/x-icon" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
     />
+
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <!-- Header and Navigation Section -->
+  <body class="page-container">
     <header>
-      <!-- Main Navigation -->
-      <nav>
+      <div class="header-container">
         <!-- Logo -->
-        <label class="logo">
-          <img src="images/logo.png" alt="Logo" />
-        </label>
+        <div class="logo">
+          <img src="img/FaisalBidmos-logo.webp" alt="Faisal Bidmos Logo" />
+        </div>
 
-        <!-- Navigation Links (Dropdown Menu) -->
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="team.html">Team</a></li>
-          <li><a href="clientelle.html">Clientele</a></li>
-          <li><a href="picturegallery.html">Picture Gallery</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-          <li><a href="blog.html">Publications & Circulars</a></li>
-          <!-- Close Button (X) -->
-        </ul>
-      </nav>
+        <!-- ☰ Toggle Button (mobile only) -->
+        <button
+          class="btn d-lg-none"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#mobileMenu"
+          aria-controls="mobileMenu"
+        >
+          ☰
+        </button>
 
-      <!-- Mobile Navigation (Offcanvas) -->
-      <nav class="navbar navbar-expand-md bg-body-tertiary" id="mobile">
-        <div class="container-fluid">
-          <!-- Logo -->
-          <label class="logo">
-            <img src="images/logo.png" alt="Logo" />
-          </label>
+        <!-- Desktop Navigation (visible on large screens) -->
+        <nav class="d-none d-lg-block">
+          <ul class="nav-links d-flex">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="clientele.html">Clientele</a></li>
+            <li><a href="gallery.html">Picture Gallery</a></li>
+            <li><a href="publications.html">Publications & Circulars</a></li>
+          </ul>
+        </nav>
 
-          <!-- Navbar Toggler (Opens Offcanvas) -->
+        <!-- Contact Button (visible on large screens) -->
+        <div class="contact-button d-none d-lg-block">
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+
+      <!-- Mobile Offcanvas Menu -->
+      <div
+        class="offcanvas offcanvas-start"
+        tabindex="-1"
+        id="mobileMenu"
+        aria-labelledby="mobileMenuLabel"
+        data-bs-backdrop="static"
+      >
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="mobileMenuLabel">Menu</h5>
           <button
-            class="navbar-toggler"
             type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#staticBackdrop"
-            aria-controls="staticBackdrop"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-            style="border: none; outline: none; box-shadow: none"
-          >
-            <span
-              class="navbar-toggler-icon"
-              style="border: none; outline: none; box-shadow: none"
-            ></span>
-          </button>
-
-          <!-- Offcanvas Sidebar -->
-          <div
-            class="offcanvas offcanvas-start"
-            data-bs-backdrop="false"
-            tabindex="-1"
-            id="staticBackdrop"
-            aria-labelledby="staticBackdropLabel"
-            style="width: 93%; box-shadow: none"
-          >
-            <div class="offcanvas-header">
-              <h5
-                class="offcanvas-title"
-                id="staticBackdropLabel"
-                style="color: white"
-              >
-                Menu
-              </h5>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="offcanvas"
-                aria-label="Close"
-                style="
-                  border: none;
-                  outline: none;
-                  box-shadow: none;
-                  background-color: white;
-                "
-              ></button>
-            </div>
-            <div class="offcanvas-body" style="box-shadow: none">
-              <nav class="navbar-nav" style="box-shadow: none">
-                <a class="nav-link" href="index.html">Home</a>
-                <a class="nav-link" href="about.html">About</a>
-                <a class="nav-link" href="services.html">Services</a>
-                <a class="nav-link" href="team.html">Team</a>
-                <a class="nav-link" href="clientelle.html">Clients</a>
-                <a class="nav-link" href="picturegallery.html">Gallery</a>
-                <a class="nav-link" href="contact.html">Contact</a>
-                <a class="nav-link" href="blog.html">Blog</a>
-              </nav>
-            </div>
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="nav-links flex-column">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="clientele.html">Clientele</a></li>
+            <li><a href="gallery.html">Picture Gallery</a></li>
+            <li><a href="publications.html">Publications & Circulars</a></li>
+          </ul>
+          <div class="contact-button mt-4">
+            <a href="contact.html">Contact</a>
           </div>
         </div>
-      </nav>
+      </div>
     </header>
 
-    <!-- Main Content: Services Section -->
-    <main>
-      <section class="heading" data-aos="fade-up">
-        <h1>Our Services</h1>
-        <p>
-          We are committed to providing top-tier financial and business
-          solutions tailored to your needs.
-        </p>
+    <main class="content-wrap" id="serve">
+      <section>
+        <div class="container text-center" data-aos="fade-up">
+          <h1 class="services-title">Our Services</h1>
+          <p class="services-subtext">
+            We will deliver our expertise in the following areas Tax planning
+            and management , audited financial statements preparation , general
+            and forensic auditing and management consulting
+          </p>
+        </div>
       </section>
+      <section id="cardy">
+        <div class="container py-5">
+          <article class="gridy">
+            <!-- Row 1 -->
+            <div class="row g-4 mb-4">
+              <div class="col-md-4">
+                <div class="card-wrapper">
+                  <div
+                    class="service-cards shadow-sm h-100"
+                    id="addit"
+                    data-aos="fade-up"
+                  >
+                    <img
+                      src="img/Financial Report.webp"
+                      alt="Financial Auditing"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Financial Auditing</h5>
+                      <p class="card-text">
+                        We start the audit plan with an understanding of the
+                        control environment , control activities , the
+                        management information system and its integrity , the
+                        communications framework of the organization and
+                        identification of the risks of the business risk...
+                      </p>
+                      <a href="#" class="read-more">Read more</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-      <div class="services-container">
-        <div class="card" data-aos="zoom-in" data-aos-delay="950">
-          <img src="../images/SPimg1.png" alt="Financial Auditing" />
-          <div class="card-body">
-            <h2>Financial Auditing</h2>
-            <p>
-              We begin our audit by understanding the client's control
-              environment, risk profile, and management information systems.
-              Using internal assessments, we gauge the organization's risk
-              tolerance. Due to weak internal controls in many firms, we focus
-              on substantive testing to ensure data integrity. Physical
-              inspections of assets, along with gap analyses for receivables and
-              economic credit loss evaluations, are key aspects of our audit
-              process. Our audits adhere to IFRS, GAAP, and IAS standards, and
-              we offer free compliance advisory services to help clients engage
-              with regulators.
-            </p>
-          </div>
-        </div>
+              <div class="col-md-4">
+                <div class="service-cards shadow-sm h-100" data-aos="fade-up">
+                  <img
+                    src="img/Business Consultation.webp"
+                    alt="Tax Management"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Tax Management</h5>
+                    <p class="card-text">
+                      We are committed, with the right audit tools, resources
+                      and procedures, to deliver the highest standards of
+                      independence, professional objectivity and technical
+                      excellence in carrying out audits of financial
+                      statements...
+                    </p>
+                    <a href="#" class="read-more">Read more</a>
+                  </div>
+                </div>
+              </div>
 
-        <div class="card" data-aos="zoom-in" data-aos-delay="1200">
-          <img src="../images/SPimg2.png" alt="Strategic Planning" />
-          <div class="card-body">
-            <h2>Strategic Planning</h2>
-            <p>
-              The business plan includes an overview of the company's background
-              and history, vision and mission statements, core values,
-              environmental scanning, and economic reviews. It outlines
-              financial assumptions, operational plans, marketing models,
-              product offerings, and five-year projections for financial
-              statements. The plan also details strategic objectives,
-              competition analysis, risk management, and compliance policies to
-              ensure business sustainability.
-            </p>
-          </div>
-        </div>
+              <div class="col-md-4">
+                <div class="service-cards shadow-sm h-100" data-aos="fade-up">
+                  <img
+                    src="img/National bank inscription.webp"
+                    alt="Accounting Services"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Accounting Services</h5>
+                    <p class="card-text">
+                      a. BANK STATEMENT RECONCILIATION Reconciliation of the
+                      bank books against the ledgers, identify gaps and advise
+                      management through exception reports b. FINANCIAL
+                      ACCOUNTING • Review of chart of accounts...
+                    </p>
+                    <a href="#" class="read-more">Read more</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
 
-        <div class="card" data-aos="zoom-in" data-aos-delay="1400">
-          <img src="../images/SPimg3.png" alt="Management Consulting" />
-          <div class="card-body">
-            <h2>Management Consulting</h2>
-            <p>
-              We assess business environments, risks, and internal control
-              systems to improve operational efficiency. Our consulting services
-              include business process optimization, risk mitigation, and
-              regulatory compliance advisory. We analyze data integrity, conduct
-              performance evaluations, and offer recommendations for financial
-              stability and sustainable growth.
-            </p>
-          </div>
-        </div>
+          <article class="gridy">
+            <!-- Row 2 -->
+            <div class="row g-4">
+              <div class="col-md-4">
+                <div class="service-cards shadow-sm h-100" data-aos="fade-up">
+                  <img
+                    src="img/Men with Calculator.webp"
+                    alt="Enterprise Risk Management"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Enterprise Risk Management</h5>
+                    <p class="card-text">
+                      a. ENTERPRISE RISK MANAGEMENT 1. Risk Planning Perform
+                      risk assessment procedures and identify risks...
+                    </p>
+                    <a href="#" class="read-more">Read more</a>
+                  </div>
+                </div>
+              </div>
 
-        <div class="card" data-aos="zoom-in" data-aos-delay="1800">
-          <img src="../images/SPimg4.png" alt="Accounting Services" />
-          <div class="card-body">
-            <h2>Accounting Services</h2>
-            <p>
-              Our accounting services include bank statement reconciliation,
-              financial reporting, and bookkeeping. We assist with the
-              preparation of financial accounts, variance analysis, and advanced
-              financial modeling. We provide comprehensive solutions to help
-              businesses maintain accurate records and ensure compliance with
-              financial regulations.
-            </p>
-          </div>
-        </div>
+              <div class="col-md-4">
+                <div class="service-cards shadow-sm h-100" data-aos="fade-up">
+                  <img
+                    src="img/Business Discussion.webp"
+                    alt="Management Consulting"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Management Consulting</h5>
+                    <p class="card-text">
+                      we protect the company from risks that could interfere
+                      with the company's objectives and goals and mitigate risk
+                      where it is unavoidable...
+                    </p>
+                    <a href="#" class="read-more">Read more</a>
+                  </div>
+                </div>
+              </div>
 
-        <div class="card" data-aos="zoom-in" data-aos-delay="2200">
-          <img src="../images/SPimg5.png" alt="Enterprise Risk Management" />
-          <div class="card-body">
-            <h2>Enterprise Risk Management</h2>
-            <p>
-              Our Enterprise Risk Management services involve risk assessments,
-              audit strategy planning, and critical accounting evaluations. We
-              analyze control environments, assess operational risks, and
-              implement effective risk mitigation strategies to safeguard
-              business assets and ensure long-term financial stability.
-            </p>
-          </div>
+              <div class="col-md-4">
+                <div class="service-cards shadow-sm h-100" data-aos="fade-up">
+                  <img src="img/In a Meeting .webp" alt="Strategic Planning" />
+                  <div class="card-body">
+                    <h5 class="card-title">Strategic Planning</h5>
+                    <p class="card-text">
+                      a. Business plan √ Business Background and History √
+                      Vision and Mission v Core Values √ Environmental scanning
+                      and economic review
+                    </p>
+                    <a href="" class="read-more">Read more</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
         </div>
-
-        <div class="card" data-aos="zoom-in" data-aos-delay="2400">
-          <img src="../images/SPimg6.png" alt="Tax Management" />
-          <div class="card-body">
-            <h2>Tax Management</h2>
-            <p>
-              We provide expert tax management services, including tax planning,
-              compliance, and audit support. Our services cover VAT
-              registration, withholding tax calculations, and personal income
-              tax advisory. We help businesses optimize tax liabilities while
-              ensuring regulatory compliance and financial efficiency.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="form-container">
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">
-            <i class="fas fa-envelope"></i>Enter your Email Address
-          </label>
-          <input
-            type="email"
-            class="form-control"
-            id="exampleFormControlInput1"
-            name="email"
-            required
-          />
-        </div>
-        <div class="mb-3">
-          <label for="exampleFormControlTextarea1" class="form-label">
-            <i class="fas fa-comment"></i>Send Us a Message
-          </label>
-          <textarea
-            class="form-control textarea"
-            id="exampleFormControlTextarea1"
-            name="message"
-            rows="3"
-            placeholder="Enter your message here"
-          ></textarea>
-          <button class="btn">
-            <a
-              href="mailto:fbidmos@gmail.com,info@faisalbidmos.com?subject=Form Submission&body=Email: %0A%0AMessage:"
-            >
-              Submit
-            </a>
-          </button>
-        </div>
-      </div>
+      </section>
     </main>
 
-    <!-- Footer Section -->
     <footer>
-      <div class="footer-container">
-        <!-- Logo and Copyright Section -->
-        <div class="footer-logo">
-          <h6>Faisal Bidmos</h6>
-          <p>Copyright © 2020 Faisal Bidmos and co<br />All rights reserved</p>
-          <div class="social-icons">
-            <a href="#"><img src="../Icons/instagram.png" alt="Instagram" /></a>
-            <a href="#"><img src="../Icons/facebook.png" alt="Facebook" /></a>
-            <a href="#"><img src="../Icons/linkedin.png" alt="LinkedIn" /></a>
-          </div>
-        </div>
+      <div class="footer-content">
+        <img
+          src="img/FaisalBidmos-logo.webp"
+          alt="Faisal Bidmos Logo"
+          class="footer-logo"
+        />
+        <p>FINANCIAL AUDITING | TAX MANAGEMENT | ACCOUNTING SERVICES</p>
+        <p>+2348052606915, +2348130735028, +2349052597020</p>
 
-        <!-- Company Links Section -->
-        <div class="footer-section">
-          <h3>Company</h3>
-          <ul>
-            <li><a href="about.html">About us</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html">Contact us</a></li>
-            <li><a href="clientelle.html">Clientele</a></li>
-            <li><a href="picturegallery.html">Picture Gallery</a></li>
-          </ul>
-        </div>
+        <form>
+          <input type="email" placeholder="Email *" required />
+          <button type="submit">Subscribe</button>
+        </form>
 
-        <!-- Contact Info Section -->
-        <div class="footer-section">
-          <h3>Contact</h3>
-          <ul>
-            <li><a href="tel:+2348052606915">+2348052606915</a></li>
-            <li><a href="tel:+2348130735028">+2348130735028</a></li>
-            <li><a href="tel:+2349052597020">+2349052597020</a></li>
-            <li><a href="mailto:fbidmos@gmail.com">fbidmos@gmail.com</a></li>
-            <li>
-              <a href="mailto:info@faisalbidmos.com">info@faisalbidmos.com</a>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Subscription Form Section -->
-        <div class="footer-section">
-          <h3>Stay up to date</h3>
-          <form action="#" method="post">
-            <input type="email" placeholder="Your email address" required />
-            <button type="submit">
-              <img src="../Icons/sendwhite.png" alt="submit" />
-            </button>
-          </form>
-        </div>
+        <p class="footer-note">Join our mailing list</p>
       </div>
     </footer>
-    <script>
-      function validateForm() {
-        var email = document.getElementById("exampleFormControlInput1").value;
-        var message = document.getElementById(
-          "exampleFormControlTextarea1"
-        ).value;
 
-        // Basic email validation using regex
-        var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-        if (!emailRegex.test(email)) {
-          alert("Please enter a valid email address.");
-          return false; // Prevent form submission if the email is invalid
-        }
-
-        // Construct the mailto link with form data
-        var mailtoLink =
-          "mailto:fbidmos@gmail.com,info@faisalbidmos.com?subject=Form Submission&body=Email: " +
-          encodeURIComponent(email) +
-          "%0A%0AMessage: " +
-          encodeURIComponent(message);
-
-        // Redirect to the mailto link, opening the user's default email client
-        window.location.href = mailtoLink;
-
-        // Prevent default form submission behavior (page reload)
-        return false;
-      }
-    </script>
-
-    <!-- AOS Animation Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
     </script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
   </body>
 </html>
