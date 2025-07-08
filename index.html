@@ -280,7 +280,7 @@
               ₦54.99 trillion national budget for 2025.
             </p>
           </div>
-          <div class="box" data-aos="fade-up">
+          <div class="box" data-aos="fade-up" id="space">
             <h1>How We Can Help</h1>
             <p>
               + We help you with tax planning and management and resolving VAT
@@ -294,13 +294,8 @@
           </div>
         </section>
 
-        <section class="both" data-aos="fade-up">
-          <div
-            class="value"
-            data-scroll
-            data-scroll-speed="1"
-            data-scroll-delay="0.05"
-          >
+        <section class="both">
+          <div class="value" data-aos="fade-up">
             <h1>Additional value added <br />service</h1>
             <p>
               + Help you to write your business plans and feasibility
@@ -317,21 +312,14 @@
 
           <div
             class="value-img"
-            data-scroll
-            data-scroll-speed="2"
-            data-scroll-delay="0.1"
+          
           >
             <img src="img/image1.webp" alt="Value Image" />
           </div>
         </section>
 
-        <article class="move" data-scroll-section>
-          <div
-            class="some-of-our"
-            data-scroll
-            data-scroll-speed="1"
-            data-scroll-direction="vertical"
-          >
+        <article class="move">
+          <div   class="some-of-our" data-aos="fade-up" >
             <h1>Some Of Our Services Include</h1>
             <p>
               We provide essential financial services to enhance your business’s
@@ -405,7 +393,7 @@
             </div>
           </div>
 
-          <div class="us">
+          <div class="us" data-aos="fade-up">
             <h1>Why Choose Us</h1>
             <p>
               We are a team of highly experienced personnel who are ready to
@@ -419,7 +407,7 @@
           </div>
         </section>
 
-        <section class="clients" >
+        <section class="clients" data-aos="fade-up" >
           <h2>Clientele</h2>
           <p>
             Our clientele consists of a diverse range of businesses and
@@ -487,7 +475,15 @@
       <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-      AOS.init();
+    AOS.init({
+  once: true,       // Animate only once
+  duration: 800     // Animation duration in ms
+});
+
+window.addEventListener('load', () => {
+  AOS.refresh();
+});
+
     </script>
   </body>
 </html>

@@ -204,7 +204,7 @@ body {
 }
 
 .write-up1 {
-  margin-top: 0; /* Prevent accidental top space */
+  margin-top: -3rem; /* Prevent accidental top space */
   padding-top: 0.5rem; /* Optional, for slight breathing room */
 }
 .write-up1 h1 {
@@ -457,10 +457,10 @@ body {
 
 .clients p {
   font-size: 1.1;
-  text-align: left;
-  max-width: 100%;
+  text-align: justify;
+  max-width: 50%;
   line-height: 2.5;
-  margin-left: 31rem;
+  margin-left: 32rem;
   margin-bottom: 3rem;
 }
 
@@ -1070,6 +1070,7 @@ button {
   header {
     zoom: 0.9;
   }
+
   /* Remove the offcanvas container shadow */
   .offcanvas {
     box-shadow: none !important;
@@ -1207,22 +1208,23 @@ button {
   .both {
     flex-direction: column;
     align-items: center;
-    zoom: 0.7;
+    zoom: 0.77;
   }
 
   .value-img img {
-    visibility: hidden;
-    opacity: 0;
-    pointer-events: none;
-    height: 0;
-    overflow: hidden;
+    display: none;
   }
 
-  .move {
-    zoom: 0.7;
+  .some-of-our {
+    zoom: 0.78;
   }
+
+  .some-of-our p {
+    line-height: 2.2;
+  }
+
   .services {
-    zoom: 0.8;
+    transform: scale(0.95);
   }
 
   .viddy {
@@ -1231,8 +1233,6 @@ button {
 
   .why {
     height: auto;
-    padding: 1rem;
-    zoom: 0.7;
   }
 
   .why h1 {
@@ -1253,33 +1253,44 @@ button {
     margin-left: auto;
     margin-right: auto;
     display: block;
+    zoom: 0.77;
+    margin-top: 1rem;
+    font-size: 1.1rem;
   }
 
   .us a {
-    width: 30rem;
+    zoom: 0.8;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-bottom: 3rem;
   }
 
   .us p {
-    zoom: 0.9;
-  }
-
-  .clients {
-    height: auto;
-    zoom: 0.7;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
     display: block;
   }
 
+  .clients {
+    padding-top: 3rem;
+    height: auto;
+    display: block;
+    padding-bottom: 3rem;
+  }
+
   .clients p {
-    font-size: 1rem;
+    font-size: 0.8rem;
     margin-left: auto;
     margin-right: auto;
     text-align: justify;
-    max-width: 80%;
+    max-width: 90%;
   }
 
   .clients h2 {
-    padding-top: 1.5rem;
-    font-size: 2rem;
+    padding-top: 0.5rem;
+    font-size: 1.5rem;
     text-align: center;
   }
 
