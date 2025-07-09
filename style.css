@@ -1047,6 +1047,272 @@ button {
   border-color: #232154;
 }
 
+@media (min-width: 300px) and (max-width: 479.98px) {
+  .btn.d-lg-none {
+    font-size: 1.5rem; /* Make the hamburger bigger */
+    background-color: transparent; /* No background by default */
+    border: none; /* Remove default border */
+    color: #3a3776; /* Your primary brand color */
+    cursor: pointer;
+    padding: 0.25rem 0.5rem; /* Small padding */
+    line-height: 1;
+    transition: color 0.3s ease;
+    margin-right: -2rem;
+  }
+
+  header {
+    zoom: 0.9;
+  }
+
+  /* Remove the offcanvas container shadow */
+  .offcanvas {
+    box-shadow: none !important;
+  }
+
+  /* Remove the dark overlay (backdrop) shadow */
+  .offcanvas-backdrop {
+    background-color: transparent !important;
+  }
+
+  .offcanvas-header .btn-close:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  /* Hover and focus states */
+  .btn.d-lg-none:hover,
+  .btn.d-lg-none:focus {
+    color: #232154; /* Darker shade on hover/focus */
+    outline: none; /* Remove default outline */
+  }
+  .offcanvas .nav-links {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .offcanvas .nav-links a {
+    text-decoration: none;
+    color: #000; /* black like desktop */
+    font-family: "InterDisplay-Medium", sans-serif;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border-bottom: none;
+    padding: 0.25rem 0;
+  }
+
+  .offcanvas .nav-links a:hover {
+    color: #3a3776;
+    border-bottom: 2px solid #3a3776;
+  }
+
+  /* Contact Button Styling - Offcanvas */
+  .offcanvas .contact-button a {
+    background-color: #3a3776;
+    padding: 10px 20px;
+    border-radius: 100px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    display: block;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+
+  .offcanvas .contact-button a:hover {
+    background-color: #232154;
+  }
+
+  .dropdown-heading {
+    display: none;
+  }
+
+  .dropdown-section {
+    zoom: 0.8;
+    margin-top: 6rem;
+  }
+
+  .top img {
+    display: none;
+  }
+
+  .mob-img img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .logo img {
+    margin-left: -4rem;
+  }
+  .write-up1 {
+    zoom: 0.8;
+  }
+
+  .write-up1 h1 {
+    font-size: 1.5rem;
+    margin-top: -2rem;
+  }
+
+  .write-up1 p {
+    font-size: 1rem;
+    max-width: 90%;
+    margin: 1rem auto;
+    text-align: justify;
+  }
+
+  .boxes {
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 0;
+    zoom: 0.9;
+  }
+
+  .box {
+    width: 90%;
+    height: auto;
+  }
+
+  .value h1,
+  .value p,
+  .value-btn {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: block;
+  }
+  .value p {
+    text-align: justify;
+    max-width: 90%;
+  }
+
+  .value h1 {
+    font-family: "InterDisplay-Bold", sans-serif;
+    font-size: 2rem;
+    margin-top: -1rem;
+  }
+
+  .value-btn {
+    width: 90%;
+  }
+
+  .both {
+    flex-direction: column;
+    align-items: center;
+    zoom: 0.77;
+  }
+
+  .value-img img {
+    display: none;
+  }
+
+  .some-of-our {
+    zoom: 0.78;
+  }
+
+  .some-of-our p {
+    line-height: 2.2;
+  }
+
+  .services {
+    transform: scale(0.95);
+  }
+
+  .viddy {
+    display: none;
+  }
+
+  .why {
+    height: auto;
+  }
+
+  .why h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .why p {
+    max-width: 100%;
+    text-align: justify;
+  }
+
+  .why-btn {
+    margin: 0 auto;
+  }
+
+  .us {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    zoom: 0.77;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+  }
+
+  .us a {
+    zoom: 0.8;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-bottom: 3rem;
+  }
+
+  .us p {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  .clients {
+    padding-top: 3rem;
+    height: auto;
+    display: block;
+    padding-bottom: 3rem;
+  }
+
+  .clients p {
+    font-size: 0.8rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+    max-width: 90%;
+  }
+
+  .clients h2 {
+    padding-top: 0.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .scroll-wrapper {
+    zoom: 0.8;
+  }
+
+  .services {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-card {
+    width: 90%;
+    height: auto;
+  }
+
+  .service-card img {
+    height: 15rem;
+  }
+
+  .some-of-our p {
+    max-width: 90%;
+  }
+
+  footer {
+    zoom: 0.8;
+  }
+}
+
 /* ==========================================
    Medium Devices:Phone Home Page
    (portrait <576px)
@@ -1138,7 +1404,6 @@ button {
 
   .dropdown-section {
     zoom: 0.6;
-    margin-top: 10rem;
   }
 
   .top img {
@@ -1155,7 +1420,7 @@ button {
   }
   .write-up1 {
     zoom: 0.8;
-    margin-top: -10rem;
+    margin-top: -8.5rem;
   }
 
   .write-up1 h1 {
@@ -1330,6 +1595,10 @@ button {
     max-width: 80%;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .write-up1 {
+    margin-top: -11rem;
   }
 
   .value h1,
