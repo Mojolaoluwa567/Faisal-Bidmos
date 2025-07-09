@@ -472,6 +472,13 @@ body {
   margin-top: 4rem;
 }
 
+#logoScroll {
+  white-space: nowrap; /* keep logos in one line */
+  overflow-x: scroll; /* enable horizontal scrolling */
+  overflow-y: hidden; /* hide vertical scrollbar */
+  -webkit-overflow-scrolling: touch; /* smooth scroll on iOS */
+  scroll-behavior: auto;
+}
 .logo-scroll {
   width: 100%;
   overflow-x: auto;
@@ -1288,6 +1295,15 @@ button {
     text-align: center;
   }
 
+  #logoScroll {
+    width: 100%; /* full width on mobile */
+  }
+
+  #logoScroll img {
+    height: 2rem; /* shrink logos if needed */
+    margin: 0 1rem;
+  }
+
   .scroll-wrapper {
     zoom: 0.8;
   }
@@ -1560,6 +1576,15 @@ button {
     padding-top: 0.5rem;
     font-size: 1.5rem;
     text-align: center;
+  }
+
+  #logoScroll {
+    width: 100%; /* full width on mobile */
+  }
+
+  #logoScroll img {
+    height: 2rem; /* shrink logos if needed */
+    margin: 0 1rem;
   }
 
   .scroll-wrapper {
