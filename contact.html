@@ -179,10 +179,21 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        disable: function () {
+          return window.innerWidth < 768; // Disable AOS on small screens
+        },
+        once: true, // Animate only once
+        duration: 300, // Animation duration in ms
+      });
+
+      window.addEventListener("load", () => {
+        AOS.refresh(); // Recalculate animations after full page load
+      });
+    </script>
+
     <script src="script.js"></script>
   </body>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
 </html>
