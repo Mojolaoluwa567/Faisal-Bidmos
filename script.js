@@ -1,62 +1,7 @@
 // ================================
-// Auto-Scrolling Logo Banner
-// ================================
-
-const scrollContainer = document.getElementById("logoScroll");
-let scrollSpeed = 1.3; // Adjust for smoothness
-
-if (scrollContainer) {
-  // Clone all logos to create seamless looping effect
-  scrollContainer.innerHTML += scrollContainer.innerHTML;
-
-  // Continuously auto-scroll the container
-  function autoScroll() {
-    scrollContainer.scrollLeft += scrollSpeed;
-
-    // Reset scroll position when halfway (original width)
-    if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth / 2) {
-      scrollContainer.scrollLeft = 0;
-    }
-
-    requestAnimationFrame(autoScroll);
-  }
-
-  autoScroll(); // Start the loop
-}
-
-// ================================
-// Core Values Bar Animation on Scroll
-// ================================
-
-document.addEventListener("DOMContentLoaded", () => {
-  const bars = document.querySelectorAll(".bar");
-  const coreSection = document.getElementById("coreValues");
-
-  if (bars.length > 0 && coreSection) {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            bars.forEach((bar) => bar.classList.add("animate"));
-            observer.disconnect(); // Run animation only once
-          }
-        });
-      },
-      { threshold: 0.3 }
-    );
-
-    observer.observe(coreSection);
-  }
-});
-
-// ================================
 // Hero Image Brightness Adjustment
 // ================================
 
-const img = document.getElementById("hero-img");
-if (img) {
-  img.style.filter = "brightness(0.6)";
-}
 
 // ================================
 // Manual Lightbox Close Function
@@ -93,7 +38,7 @@ function playVideo() {
 // Array of image URLs (20 total)
 const imageUrls = [
   "img/tinu.jpeg",
-  "img/uwaleke.webp",
+  "img/Uwaleke.webp",
   "img/world.webp",
   "img/octob.webp",
   "img/juneal.webp",
@@ -630,77 +575,57 @@ Faisal Bidmos  is a Management consultant, a Fellow Inst. Chartered Accountants 
   },
 ];
 
-// Render blog previews
-const blogContainer = document.getElementById("blog-posts");
-posts.forEach((post, i) => {
-  const col = document.createElement("div");
-  col.className = "col";
-  col.setAttribute("data-aos", "fade-up");
+// ================================
+// Publications: featured post, filters, cards, reader
+// ================================
+const pubCats = ["Public finance","Public finance","Public finance","Public finance","Public finance","Business insights","Tax notices","Public finance","Banking & regulation","Public finance","Banking & regulation","Public finance","Banking & regulation","Banking & regulation","Tax notices"];
+const pubGrid = document.getElementById("blog-posts");
+if (pubGrid) {
+  const $ = (id) => document.getElementById(id);
+  const list = $("blog-list"), reader = $("blog-full-view"), body = $("full-content");
+  const top = () => window.scrollTo({ top: Math.max(0, document.querySelector(".layout").offsetTop - 100), behavior: "smooth" });
+  let current = 0;
 
-  const date = `2025-07-${((i % 30) + 1).toString().padStart(2, "0")}`;
+  $("pub-featured").innerHTML = `<a href="#" class="pub-feature" data-open="0"><img src="${imageUrls[0]}" alt="" /><div class="pub-feature-text"><span class="tag">${pubCats[0]}</span><h2>${posts[0].title}</h2></div></a>`;
+  pubGrid.innerHTML = posts.map((p, i) => `
+    <article class="pub-card" data-cat="${pubCats[i]}">
+      <button class="pub-img" type="button" data-open="${i}" tabindex="-1" aria-hidden="true"><img src="${imageUrls[i]}" alt="" loading="lazy" /></button>
+      <span class="tag">${pubCats[i]}</span>
+      <h3><a href="#" data-open="${i}">${p.title}</a></h3>
+      ${p.intro ? `<p>${p.intro}</p>` : ""}
+      <a href="#" class="read-more" data-open="${i}">Read more</a>
+    </article>`).join("");
+  $("pub-latest").innerHTML = posts.slice(0, 5).map((p, i) => `<li><a href="#" data-open="${i}"><img src="${imageUrls[i]}" alt="" loading="lazy" /><span>${p.title}</span></a></li>`).join("");
 
-  col.innerHTML = `
-    <div class="blog-post card h-100">
-      <img src="${imageUrls[i]}" alt="${post.title}" class="card-img-top" />
-      <div class="card-body d-flex flex-column">
-        <h5 class="blog-title mb-2">${post.title}</h5>
-        <p class="blog-intro mb-3">${post.intro}</p>
-        <a href="#" class="btn btn-primary mt-auto read-more-btn" data-index="${i}">Read More</a>
-      </div>
-    </div>
-  `;
+  const cats = [...new Set(pubCats)];
+  $("pub-filter").innerHTML = ["All", ...cats].map((c, k) => {
+    const n = k === 0 ? posts.length : pubCats.filter((x) => x === c).length;
+    return `<li><button type="button" data-filter="${c}" aria-pressed="${k === 0}">${c}<span class="count">${n}</span></button></li>`;
+  }).join("");
+  $("pub-filter").addEventListener("click", (e) => {
+    const b = e.target.closest("[data-filter]"); if (!b) return;
+    const f = b.dataset.filter;
+    $("pub-filter").querySelectorAll("button").forEach((x) => x.setAttribute("aria-pressed", x === b));
+    pubGrid.querySelectorAll(".pub-card").forEach((c) => (c.hidden = f !== "All" && c.dataset.cat !== f));
+    $("pub-featured").hidden = f !== "All";
+    $("pub-title").textContent = f === "All" ? "All publications" : f;
+  });
 
-  blogContainer.appendChild(col);
-});
-
-// Full view handler
-const fullView = document.getElementById("blog-full-view");
-const fullTitle = document.getElementById("full-title");
-const fullImage = document.getElementById("full-image");
-const fullDate = document.getElementById("full-date");
-const fullContent = document.getElementById("full-content");
-const prevBtn = document.getElementById("prev-post");
-const nextBtn = document.getElementById("next-post");
-const backBtn = document.getElementById("go-back");
-
-let currentIndex = 0;
-
-function showFullPost(index) {
-  const post = posts[index];
-  currentIndex = index;
-
-  fullTitle.textContent = "";
-  fullImage.src = "";
-  fullImage.style.display = "none";
-  fullDate.textContent = "";
-  fullDate.style.display = "none";
-  fullContent.innerHTML = post.content;
-
-  // 🔴 Hide blog grid and blog header
-  document.getElementById("blog-posts").classList.add("d-none");
-  document.getElementById("blog-header").classList.add("d-none");
-
-  // ✅ Show full blog view
-  document.getElementById("blog-full-view").classList.remove("d-none");
+  const show = (i) => {
+    current = i;
+    body.innerHTML = posts[i].content;
+    list.classList.add("d-none"); reader.classList.remove("d-none");
+    $("prev-post").disabled = i === 0; $("next-post").disabled = i === posts.length - 1;
+    top();
+  };
+  const back = () => { reader.classList.add("d-none"); list.classList.remove("d-none"); history.replaceState(null, "", location.pathname); top(); };
+  document.addEventListener("click", (e) => {
+    const o = e.target.closest("[data-open]");
+    if (o) { e.preventDefault(); show(parseInt(o.dataset.open, 10)); }
+  });
+  $("go-back").addEventListener("click", back);
+  $("prev-post").addEventListener("click", () => current > 0 && show(current - 1));
+  $("next-post").addEventListener("click", () => current < posts.length - 1 && show(current + 1));
+  const m = location.hash.match(/^#read-(\d+)$/);
+  if (m && posts[+m[1]]) show(+m[1]);
 }
-
-document.addEventListener("click", function (e) {
-  if (e.target.classList.contains("read-more-btn")) {
-    e.preventDefault();
-    const index = parseInt(e.target.dataset.index);
-    showFullPost(index);
-  }
-});
-
-backBtn.addEventListener("click", function () {
-  fullView.classList.add("d-none");
-  document.getElementById("blog-posts").classList.remove("d-none");
-});
-
-prevBtn.addEventListener("click", function () {
-  if (currentIndex > 0) showFullPost(currentIndex - 1);
-});
-
-nextBtn.addEventListener("click", function () {
-  if (currentIndex < posts.length - 1) showFullPost(currentIndex + 1);
-});

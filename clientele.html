@@ -4,8 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Clientele | Faisal Bidmos & co</title>
-    <!-- AOS CSS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- Favicon -->
     <link rel="icon" href="img/FaisalBidmos-logo.webp" type="image/x-icon" />
 
@@ -18,78 +16,40 @@
   </head>
   <body class="page-container">
     <header>
-      <div class="header-container">
-        <!-- Logo -->
-        <div class="logo">
-          <img src="img/FaisalBidmos-logo.webp" alt="Faisal Bidmos Logo" />
-        </div>
-
-        <!-- ☰ Toggle Button (mobile only) -->
-        <button
-          class="btn d-lg-none"
-          type="button"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#mobileMenu"
-          aria-controls="mobileMenu"
-        >
-          ☰
-        </button>
-
-        <!-- Desktop Navigation (visible on large screens) -->
-        <nav class="d-none d-lg-block">
-          <ul class="nav-links d-flex">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="team.html">Team</a></li>
-            <li><a href="clientele.html">Clientele</a></li>
-            <li><a href="gallery.html">Picture Gallery</a></li>
-            <li><a href="publications.html">Publications & Circulars</a></li>
-          </ul>
-        </nav>
-
-        <!-- Contact Button (visible on large screens) -->
-        <div class="contact-button d-none d-lg-block">
-          <a href="contact.html">Contact</a>
-        </div>
-      </div>
-
-      <!-- Mobile Offcanvas Menu -->
-      <div
-        class="offcanvas offcanvas-start"
-        tabindex="-1"
-        id="mobileMenu"
-        aria-labelledby="mobileMenuLabel"
-        data-bs-backdrop="static"
-      >
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="mobileMenuLabel">Menu</h5>
-          <button
-            type="button"
-            class="btn-close"
-            data-bs-dismiss="offcanvas"
-            aria-label="Close"
-          ></button>
-        </div>
-        <div class="offcanvas-body">
-          <ul class="nav-links flex-column">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="team.html">Team</a></li>
-            <li><a href="clientele.html">Clientele</a></li>
-            <li><a href="gallery.html">Picture Gallery</a></li>
-            <li><a href="publications.html">Publications & Circulars</a></li>
-          </ul>
-          <div class="contact-button mt-4">
-            <a href="contact.html">Contact</a>
-          </div>
-        </div>
-      </div>
-    </header>
+  <div class="header-container">
+    <a class="logo" href="index.html"><img src="img/FaisalBidmos-logo.webp" alt="Faisal Bidmos &amp; Co home" /></a>
+    <nav class="d-none d-xl-block" aria-label="Main"><ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="team.html">Team</a></li>
+<li><a href="clientele.html" aria-current="page">Clientele</a></li>
+<li><a href="gallery.html">Picture Gallery</a></li>
+<li><a href="publications.html">Publications & Circulars</a></li>
+    </ul></nav>
+    <div class="contact-button d-none d-xl-block"><a href="contact.html">Contact</a></div>
+    <button class="menu-toggle d-xl-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">Menu</button>
+  </div>
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+    <div class="offcanvas-header"><h5 class="offcanvas-title" id="mobileMenuLabel">Menu</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button></div>
+    <div class="offcanvas-body">
+      <ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="team.html">Team</a></li>
+<li><a href="clientele.html" aria-current="page">Clientele</a></li>
+<li><a href="gallery.html">Picture Gallery</a></li>
+<li><a href="publications.html">Publications & Circulars</a></li>
+      </ul>
+      <div class="contact-button"><a href="contact.html">Contact</a></div>
+    </div>
+  </div>
+</header>
 
     <main>
-      <section data-aos="fade-up" class="heading" data-aos="fade-up">
+      <section class="heading">
         <h1>Our Valued Clients</h1>
         <p>
           We proudly serve a wide range of clients across various industries,
@@ -100,7 +60,7 @@
 
       <section class="grid-container">
         <!-- Row 1 -->
-        <div data-aos="fade-up">
+        <div>
           <div class="client">
             <img src="img/373energy.webp" alt="Chanelle MFB Ltd" />
           </div>
@@ -116,7 +76,7 @@
         </div>
 
         <!-- Row 2 -->
-        <div data-aos="fade-up">
+        <div>
           <div class="client">
             <img src="img/B channel.webp" alt="Kuddy Cosmetics" />
           </div>
@@ -133,7 +93,7 @@
 
         <!-- Row 3 -->
 
-        <div data-aos="fade-up">
+        <div>
           <div class="client" id="energy">
             <img src="img/bravos.webp" alt="373 Energy" class="energy1" />
           </div>
@@ -150,7 +110,7 @@
 
         <!-- Row 4 -->
 
-        <div data-aos="fade-up">
+        <div>
           <div class="client">
             <img src="img/Dotfit.webp" alt="Green Energy MFB Ltd" />
           </div>
@@ -169,7 +129,7 @@
         </div>
 
         <!-- Row 5 -->
-        <div data-aos="fade-up">
+        <div>
           <div class="client">
             <img src="img/Finex.webp" alt="Strategic Sales Mgmt" />
           </div>
@@ -185,7 +145,7 @@
         </div>
 
         <!-- Row 6 -->
-        <div data-aos="fade-up">
+        <div>
           <div class="client"><img src="img/linksmfb.webp" alt="DPA" /></div>
           <div class="client">
             <img src="img/malony.webp" alt="Atom Consumer Services Ltd" />
@@ -199,7 +159,7 @@
         </div>
 
         <!-- Row 7 -->
-        <div data-aos="fade-up">
+        <div>
           <div class="client">
             <img src="img/strategy.webp" alt="Souvernir" />
           </div>
@@ -216,41 +176,41 @@
       </section>
     </main>
     <footer>
-      <div class="footer-content">
-        <img
-          src="img/FaisalBidmos-logo.webp"
-          alt="Faisal Bidmos Logo"
-          class="footer-logo"
-        />
-        <p>FINANCIAL AUDITING | TAX MANAGEMENT | ACCOUNTING SERVICES</p>
-        <p>+2348023240048,+2348052606915, +2348130735028, +2349052597020</p>
-
-        <form>
-          <input type="email" placeholder="Email *" required />
-          <button type="submit">Subscribe</button>
-        </form>
-
-        <p class="footer-note">Join our mailing list</p>
-      </div>
-    </footer>
+  <div class="footer-content">
+    <div>
+      <img src="img/FaisalBidmos-logo.webp" alt="Faisal Bidmos &amp; Co" class="footer-logo" />
+      <p>Financial auditing, tax management and accounting services.</p>
+    </div>
+    <div>
+      <h4>Pages</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="clientele.html">Clientele</a></li>
+        <li><a href="gallery.html">Picture Gallery</a></li>
+        <li><a href="publications.html">Publications & Circulars</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p>4 Faisal Bidmos Close, Havana Estate, Arepo, Ogun State</p>
+      <p>08023240048<br />08052606915<br />08130735028<br />09052597020</p>
+      <p><a href="mailto:info@faisalbidmos.com">info@faisalbidmos.com</a></p>
+    </div>
+    <div>
+      <h4>Join our mailing list</h4>
+      <form><input type="email" placeholder="Email address" aria-label="Email address" required /><button type="submit">Subscribe</button></form>
+    </div>
+  </div>
+  <div class="footer-base">&copy; Faisal Bidmos &amp; Co. All rights reserved.</div>
+</footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init({
-        disable: function () {
-          return window.innerWidth < 768; // Disable AOS on small screens
-        },
-        once: true, // Animate only once
-        duration: 300, // Animation duration in ms
-      });
-
-      window.addEventListener("load", () => {
-        AOS.refresh(); // Recalculate animations after full page load
-      });
-    </script>
-
     <script src="script.js"></script>
+    <script src="reveal.js"></script>
   </body>
 </html>

@@ -4,9 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Services | Faisal Bidmos & co</title>
-    <!-- AOS CSS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-
     <!-- Favicon -->
     <link rel="icon" href="img/FaisalBidmos-logo.webp" type="image/x-icon" />
     <link
@@ -18,79 +15,41 @@
   </head>
   <body class="page-container">
     <header>
-      <div class="header-container">
-        <!-- Logo -->
-        <div class="logo">
-          <img src="img/FaisalBidmos-logo.webp" alt="Faisal Bidmos Logo" />
-        </div>
-
-        <!-- ☰ Toggle Button (mobile only) -->
-        <button
-          class="btn d-lg-none"
-          type="button"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#mobileMenu"
-          aria-controls="mobileMenu"
-        >
-          ☰
-        </button>
-
-        <!-- Desktop Navigation (visible on large screens) -->
-        <nav class="d-none d-lg-block">
-          <ul class="nav-links d-flex">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="team.html">Team</a></li>
-            <li><a href="clientele.html">Clientele</a></li>
-            <li><a href="gallery.html">Picture Gallery</a></li>
-            <li><a href="publications.html">Publications & Circulars</a></li>
-          </ul>
-        </nav>
-
-        <!-- Contact Button (visible on large screens) -->
-        <div class="contact-button d-none d-lg-block">
-          <a href="contact.html">Contact</a>
-        </div>
-      </div>
-
-      <!-- Mobile Offcanvas Menu -->
-      <div
-        class="offcanvas offcanvas-start"
-        tabindex="-1"
-        id="mobileMenu"
-        aria-labelledby="mobileMenuLabel"
-        data-bs-backdrop="static"
-      >
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="mobileMenuLabel">Menu</h5>
-          <button
-            type="button"
-            class="btn-close"
-            data-bs-dismiss="offcanvas"
-            aria-label="Close"
-          ></button>
-        </div>
-        <div class="offcanvas-body">
-          <ul class="nav-links flex-column">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="team.html">Team</a></li>
-            <li><a href="clientele.html">Clientele</a></li>
-            <li><a href="gallery.html">Picture Gallery</a></li>
-            <li><a href="publications.html">Publications & Circulars</a></li>
-          </ul>
-          <div class="contact-button mt-4">
-            <a href="contact.html">Contact</a>
-          </div>
-        </div>
-      </div>
-    </header>
+  <div class="header-container">
+    <a class="logo" href="index.html"><img src="img/FaisalBidmos-logo.webp" alt="Faisal Bidmos &amp; Co home" /></a>
+    <nav class="d-none d-xl-block" aria-label="Main"><ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="services.html" aria-current="page">Services</a></li>
+<li><a href="team.html">Team</a></li>
+<li><a href="clientele.html">Clientele</a></li>
+<li><a href="gallery.html">Picture Gallery</a></li>
+<li><a href="publications.html">Publications & Circulars</a></li>
+    </ul></nav>
+    <div class="contact-button d-none d-xl-block"><a href="contact.html">Contact</a></div>
+    <button class="menu-toggle d-xl-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">Menu</button>
+  </div>
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+    <div class="offcanvas-header"><h5 class="offcanvas-title" id="mobileMenuLabel">Menu</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button></div>
+    <div class="offcanvas-body">
+      <ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="services.html" aria-current="page">Services</a></li>
+<li><a href="team.html">Team</a></li>
+<li><a href="clientele.html">Clientele</a></li>
+<li><a href="gallery.html">Picture Gallery</a></li>
+<li><a href="publications.html">Publications & Circulars</a></li>
+      </ul>
+      <div class="contact-button"><a href="contact.html">Contact</a></div>
+    </div>
+  </div>
+</header>
 
     <main class="content-wrap" id="serve">
       <section>
-        <div class="container text-center" data-aos="fade-up">
+        <div class="container text-center">
           <h1 class="services-title">Our Services</h1>
           <p class="services-subtext">
             We will deliver our expertise in the following areas Tax planning
@@ -109,7 +68,7 @@
                   <div
                     class="service-cards shadow-sm h-100"
                     id="addit"
-                    data-aos="fade-up"
+                   
                   >
                     <img
                       src="img/Financial Report.webp"
@@ -117,54 +76,37 @@
                     />
                     <div class="card-body">
                       <h5 class="card-title">Financial Auditing</h5>
-                      <p class="card-text">
-                        We start the audit plan with an understanding of the
-                        control environment , control activities , the
-                        management information system and its integrity , the
-                        communications framework of the organization and
-                        identification of the risks of the business risk...
-                      </p>
-                      <a href="#" class="read-more">Read more</a>
+                      <p class="card-text">We plan every audit around the client's control environment and risk profile, then test balances against records, registers and independent confirmations.</p>
+<a href="financial-auditing.html" class="read-more">Read more</a>
                     </div>
                   </div>
                 </div>
               </div>
 
               <div class="col-md-4">
-                <div class="service-cards shadow-sm h-100" data-aos="fade-up">
+                <div class="service-cards shadow-sm h-100">
                   <img
                     src="img/Business Consultation.webp"
                     alt="Tax Management"
                   />
                   <div class="card-body">
                     <h5 class="card-title">Tax Management</h5>
-                    <p class="card-text">
-                      We are committed, with the right audit tools, resources
-                      and procedures, to deliver the highest standards of
-                      independence, professional objectivity and technical
-                      excellence in carrying out audits of financial
-                      statements...
-                    </p>
-                    <a href="#" class="read-more">Read more</a>
+                    <p class="card-text">Tax planning, returns, assessments and clearance certificates, handled with the revenue offices on your behalf.</p>
+<a href="tax-management.html" class="read-more">Read more</a>
                   </div>
                 </div>
               </div>
 
               <div class="col-md-4">
-                <div class="service-cards shadow-sm h-100" data-aos="fade-up">
+                <div class="service-cards shadow-sm h-100">
                   <img
                     src="img/National bank inscription.webp"
                     alt="Accounting Services"
                   />
                   <div class="card-body">
                     <h5 class="card-title">Accounting Services</h5>
-                    <p class="card-text">
-                      a. BANK STATEMENT RECONCILIATION Reconciliation of the
-                      bank books against the ledgers, identify gaps and advise
-                      management through exception reports b. FINANCIAL
-                      ACCOUNTING • Review of chart of accounts...
-                    </p>
-                    <a href="#" class="read-more">Read more</a>
+                    <p class="card-text">Bank reconciliation, financial and management accounts, and the ratio analysis and reports that management relies on.</p>
+<a href="accounting-services.html" class="read-more">Read more</a>
                   </div>
                 </div>
               </div>
@@ -175,51 +117,40 @@
             <!-- Row 2 -->
             <div class="row g-4">
               <div class="col-md-4">
-                <div class="service-cards shadow-sm h-100" data-aos="fade-up">
+                <div class="service-cards shadow-sm h-100">
                   <img
                     src="img/Men with Calculator.webp"
                     alt="Enterprise Risk Management"
                   />
                   <div class="card-body">
                     <h5 class="card-title">Enterprise Risk Management</h5>
-                    <p class="card-text">
-                      a. ENTERPRISE RISK MANAGEMENT 1. Risk Planning Perform
-                      risk assessment procedures and identify risks...
-                    </p>
-                    <a href="#" class="read-more">Read more</a>
+                    <p class="card-text">Risk planning, evaluation of the control environment and substantive procedures, concluding on critical accounting matters.</p>
+<a href="enterprise-risk-management.html" class="read-more">Read more</a>
                   </div>
                 </div>
               </div>
 
               <div class="col-md-4">
-                <div class="service-cards shadow-sm h-100" data-aos="fade-up">
+                <div class="service-cards shadow-sm h-100">
                   <img
                     src="img/Business Discussion.webp"
                     alt="Management Consulting"
                   />
                   <div class="card-body">
                     <h5 class="card-title">Management Consulting</h5>
-                    <p class="card-text">
-                      we protect the company from risks that could interfere
-                      with the company's objectives and goals and mitigate risk
-                      where it is unavoidable...
-                    </p>
-                    <a href="#" class="read-more">Read more</a>
+                    <p class="card-text">Compliance programme support and internal control reviews that protect the company from risk, fraud and waste.</p>
+<a href="management-consulting.html" class="read-more">Read more</a>
                   </div>
                 </div>
               </div>
 
               <div class="col-md-4">
-                <div class="service-cards shadow-sm h-100" data-aos="fade-up">
+                <div class="service-cards shadow-sm h-100">
                   <img src="img/In a Meeting .webp" alt="Strategic Planning" />
                   <div class="card-body">
                     <h5 class="card-title">Strategic Planning</h5>
-                    <p class="card-text">
-                      a. Business plan √ Business Background and History √
-                      Vision and Mission v Core Values √ Environmental scanning
-                      and economic review
-                    </p>
-                    <a href="" class="read-more">Read more</a>
+                    <p class="card-text">Business plans and the standard operating procedures, from credit policy to succession planning, that a growing business needs.</p>
+<a href="strategic-planning.html" class="read-more">Read more</a>
                   </div>
                 </div>
               </div>
@@ -227,43 +158,44 @@
           </article>
         </div>
       </section>
+    <section class="section tint"><div class="wrap split"><h2>Recovery services</h2><div><p>Specialised assignments for government and corporate bodies: POS withholding tax recovery, excess bank charges recovery, and outstanding PAYE on the IPPIS platform.</p><a class="btn-solid" href="recovery-services.html">Read more</a></div></div></section>
     </main>
 
     <footer>
-      <div class="footer-content">
-        <img
-          src="img/FaisalBidmos-logo.webp"
-          alt="Faisal Bidmos Logo"
-          class="footer-logo"
-        />
-        <p>FINANCIAL AUDITING | TAX MANAGEMENT | ACCOUNTING SERVICES</p>
-        <p>+2348023240048,+2348052606915, +2348130735028, +2349052597020</p>
-
-        <form>
-          <input type="email" placeholder="Email *" required />
-          <button type="submit">Subscribe</button>
-        </form>
-
-        <p class="footer-note">Join our mailing list</p>
-      </div>
-    </footer>
+  <div class="footer-content">
+    <div>
+      <img src="img/FaisalBidmos-logo.webp" alt="Faisal Bidmos &amp; Co" class="footer-logo" />
+      <p>Financial auditing, tax management and accounting services.</p>
+    </div>
+    <div>
+      <h4>Pages</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="clientele.html">Clientele</a></li>
+        <li><a href="gallery.html">Picture Gallery</a></li>
+        <li><a href="publications.html">Publications & Circulars</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p>4 Faisal Bidmos Close, Havana Estate, Arepo, Ogun State</p>
+      <p>08023240048<br />08052606915<br />08130735028<br />09052597020</p>
+      <p><a href="mailto:info@faisalbidmos.com">info@faisalbidmos.com</a></p>
+    </div>
+    <div>
+      <h4>Join our mailing list</h4>
+      <form><input type="email" placeholder="Email address" aria-label="Email address" required /><button type="submit">Subscribe</button></form>
+    </div>
+  </div>
+  <div class="footer-base">&copy; Faisal Bidmos &amp; Co. All rights reserved.</div>
+</footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init({
-        disable: function () {
-          return window.innerWidth < 768; // Disable AOS on small screens
-        },
-        once: true, // Animate only once
-        duration: 300, // Animation duration in ms
-      });
-
-      window.addEventListener("load", () => {
-        AOS.refresh(); // Recalculate animations after full page load
-      });
-    </script>
-
     <script src="script.js"></script>
+    <script src="reveal.js"></script>
   </body>
 </html>

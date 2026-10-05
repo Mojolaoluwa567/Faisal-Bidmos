@@ -4,8 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Team | Faisal Bidmos & co</title>
-    <!-- AOS CSS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- Favicon -->
     <link rel="icon" href="img/FaisalBidmos-logo.webp" type="image/x-icon" />
     <link
@@ -17,137 +15,96 @@
   </head>
   <body class="page-container">
     <header>
-      <div class="header-container">
-        <!-- Logo -->
-        <div class="logo">
-          <img src="img/FaisalBidmos-logo.webp" alt="Faisal Bidmos Logo" />
-        </div>
-
-        <!-- ☰ Toggle Button (mobile only) -->
-        <button
-          class="btn d-lg-none"
-          type="button"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#mobileMenu"
-          aria-controls="mobileMenu"
-        >
-          ☰
-        </button>
-
-        <!-- Desktop Navigation (visible on large screens) -->
-        <nav class="d-none d-lg-block">
-          <ul class="nav-links d-flex">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="team.html">Team</a></li>
-            <li><a href="clientele.html">Clientele</a></li>
-            <li><a href="gallery.html">Picture Gallery</a></li>
-            <li><a href="publications.html">Publications & Circulars</a></li>
-          </ul>
-        </nav>
-
-        <!-- Contact Button (visible on large screens) -->
-        <div class="contact-button d-none d-lg-block">
-          <a href="contact.html">Contact</a>
-        </div>
-      </div>
-
-      <!-- Mobile Offcanvas Menu -->
-      <div
-        class="offcanvas offcanvas-start"
-        tabindex="-1"
-        id="mobileMenu"
-        aria-labelledby="mobileMenuLabel"
-        data-bs-backdrop="static"
-      >
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="mobileMenuLabel">Menu</h5>
-          <button
-            type="button"
-            class="btn-close"
-            data-bs-dismiss="offcanvas"
-            aria-label="Close"
-          ></button>
-        </div>
-        <div class="offcanvas-body">
-          <ul class="nav-links flex-column">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="team.html">Team</a></li>
-            <li><a href="clientele.html">Clientele</a></li>
-            <li><a href="gallery.html">Picture Gallery</a></li>
-            <li><a href="publications.html">Publications & Circulars</a></li>
-          </ul>
-          <div class="contact-button mt-4">
-            <a href="contact.html">Contact</a>
+  <div class="header-container">
+    <a class="logo" href="index.html"><img src="img/FaisalBidmos-logo.webp" alt="Faisal Bidmos &amp; Co home" /></a>
+    <nav class="d-none d-xl-block" aria-label="Main"><ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="team.html">Team</a></li>
+<li><a href="clientele.html">Clientele</a></li>
+<li><a href="gallery.html">Picture Gallery</a></li>
+<li><a href="publications.html" aria-current="page">Publications & Circulars</a></li>
+    </ul></nav>
+    <div class="contact-button d-none d-xl-block"><a href="contact.html">Contact</a></div>
+    <button class="menu-toggle d-xl-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">Menu</button>
+  </div>
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+    <div class="offcanvas-header"><h5 class="offcanvas-title" id="mobileMenuLabel">Menu</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button></div>
+    <div class="offcanvas-body">
+      <ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="team.html">Team</a></li>
+<li><a href="clientele.html">Clientele</a></li>
+<li><a href="gallery.html">Picture Gallery</a></li>
+<li><a href="publications.html" aria-current="page">Publications & Circulars</a></li>
+      </ul>
+      <div class="contact-button"><a href="contact.html">Contact</a></div>
+    </div>
+  </div>
+</header>
+    <main class="content-wrap">
+      <section class="pub-head"><h1>Publications &amp; Circulars</h1><p>Circulars, notices and articles on tax, banking and public finance.</p></section>
+      <div class="layout">
+        <aside class="side side-left" aria-label="Browse publications"><h2 class="side-title">Browse</h2><ul class="side-nav" id="pub-filter"></ul></aside>
+        <div class="center">
+          <div id="blog-list">
+            <div id="pub-featured"></div>
+            <h2 class="center-title" id="pub-title">All publications</h2>
+            <div id="blog-posts" class="pub-grid"></div>
+          </div>
+          <div id="blog-full-view" class="d-none">
+            <button id="go-back" class="btn-ghost" type="button">&larr; All publications</button>
+            <div id="full-content" style="margin-top:1.5rem"></div>
+            <div class="pager"><button id="prev-post" class="btn-ghost" type="button">&larr; Previous</button><button id="next-post" class="btn-ghost" type="button">Next &rarr;</button></div>
           </div>
         </div>
-      </div>
-    </header>
-    <main>
-      <div class="container py-5" id="blogs">
-        <h1 id="blog-header" class="mb-4 text-center">Blog</h1>
-
-        <div
-          class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4"
-          id="blog-posts"
-        >
-          <!-- JavaScript will inject posts here -->
-        </div>
+        <aside class="side side-right" aria-label="Latest and contact">
+          <div class="side-card"><h2>Latest</h2><ul class="mini" id="pub-latest"></ul></div>
+          <div class="side-card dark"><h2>Need advice?</h2><p>Speak with our team about how a circular affects your business.</p><a class="btn-solid" href="contact.html">Contact us</a></div>
+        </aside>
       </div>
     </main>
 
-    <div id="blog-full-view" class="d-none">
-      <button id="go-back" class="btn btn-sm btn-secondary mb-3">← Back</button>
-      <h2 id="full-title"></h2>
-      <img id="full-image" class="img-fluid my-3" />
-      <p id="full-date" class="text-muted"></p>
-      <div id="full-content" class="mb-4"></div>
-      <div class="d-flex justify-content-between">
-        <button id="prev-post" class="btn btn-outline-primary">
-          ← Previous
-        </button>
-        <button id="next-post" class="btn btn-outline-primary">Next →</button>
-      </div>
-    </div>
 
     <footer>
-      <div class="footer-content">
-        <img
-          src="img/FaisalBidmos-logo.webp"
-          alt="Faisal Bidmos Logo"
-          class="footer-logo"
-        />
-        <p>FINANCIAL AUDITING | TAX MANAGEMENT | ACCOUNTING SERVICES</p>
-        <p>+2348023240048,+2348052606915, +2348130735028, +2349052597020</p>
-
-        <form>
-          <input type="email" placeholder="Email *" required />
-          <button type="submit">Subscribe</button>
-        </form>
-
-        <p class="footer-note">Join our mailing list</p>
-      </div>
-    </footer>
+  <div class="footer-content">
+    <div>
+      <img src="img/FaisalBidmos-logo.webp" alt="Faisal Bidmos &amp; Co" class="footer-logo" />
+      <p>Financial auditing, tax management and accounting services.</p>
+    </div>
+    <div>
+      <h4>Pages</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="clientele.html">Clientele</a></li>
+        <li><a href="gallery.html">Picture Gallery</a></li>
+        <li><a href="publications.html">Publications & Circulars</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p>4 Faisal Bidmos Close, Havana Estate, Arepo, Ogun State</p>
+      <p>08023240048<br />08052606915<br />08130735028<br />09052597020</p>
+      <p><a href="mailto:info@faisalbidmos.com">info@faisalbidmos.com</a></p>
+    </div>
+    <div>
+      <h4>Join our mailing list</h4>
+      <form><input type="email" placeholder="Email address" aria-label="Email address" required /><button type="submit">Subscribe</button></form>
+    </div>
+  </div>
+  <div class="footer-base">&copy; Faisal Bidmos &amp; Co. All rights reserved.</div>
+</footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init({
-        disable: function () {
-          return window.innerWidth < 768; // Disable AOS on small screens
-        },
-        once: true, // Animate only once
-        duration: 300, // Animation duration in ms
-      });
-
-      window.addEventListener("load", () => {
-        AOS.refresh(); // Recalculate animations after full page load
-      });
-    </script>
-
     <script src="script.js"></script>
+    <script src="reveal.js"></script>
   </body>
 </html>
